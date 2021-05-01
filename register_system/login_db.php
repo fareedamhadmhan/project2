@@ -11,7 +11,7 @@
         if (empty($username)) {
             array_push($errors, "Username is required");
         }
-        //HI Hello
+        //HI i'm Earth
         if (empty($password)) {
             array_push($errors, "Password is required");
         }
