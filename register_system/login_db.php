@@ -14,8 +14,6 @@
         if (empty($password)) {
             array_push($errors, "Password is required");
         }
-//Test Earth
-//fada
         if (count($errors) == 0) {
             $password = $password;
             $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
