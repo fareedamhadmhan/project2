@@ -31,6 +31,7 @@
         //fada
         //earth
         //fada
+        //earth
 
         $user_check_query = "SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1";
         $query = mysqli_query($conn, $user_check_query);
