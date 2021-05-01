@@ -14,7 +14,6 @@
         if (empty($password)) {
             array_push($errors, "Password is required");
         }
-
         if (count($errors) == 0) {
             $password = $password;
             $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
@@ -36,5 +35,5 @@
             header("location: login.php");
         }
     }
-//jyuythgtdtiu.k
+
 ?>
