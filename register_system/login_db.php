@@ -36,5 +36,5 @@
             header("location: login.php");
         }
     }
-
+//jyuythgtdtiu.k
 ?>
