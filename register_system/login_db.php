@@ -11,8 +11,7 @@
         if (empty($username)) {
             array_push($errors, "Username is required");
         }
-        //Test
-
+        //eeeee
         if (empty($password)) {
             array_push($errors, "Password is required");
         }
