@@ -100,10 +100,10 @@
 
 
 //1. เชื่อมต่อ database: 
-include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include('connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
  
 //2. query ข้อมูลจากตาราง tb_member: 
-$query = "SELECT * FROM foodtype ORDER BY foodtype_Name asc" or die("Error:" . mysqli_error()); 
+$query = "SELECT * FROM food_type ORDER BY food_type asc" or die("Error:" . mysqli_error($con)); 
 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
 //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
@@ -114,7 +114,7 @@ $result = mysqli_query($con, $query);
 
 while($row = mysqli_fetch_array($result)) { 
   echo "<tr>";
-  echo "<td>" .$row["foodtype_Name"] .  "</td> "; 
+  echo "<td>" .$row["food_type"] .  "</td> "; 
   echo "</tr>";
 
 }
@@ -138,11 +138,11 @@ mysqli_close($con);
         <p><font color="blue"><a href="เมนูน้ำพริก.html">เมนูน้ำพริก</p></th></FONT> 
         <p><font color="blue"><a href="เมนูกับข้าว.html">เมนูกับข้าว</p></th></FONT>  
         <p><font color="blue"><a href="เมนูอาหารจีน.html">เมนูอาหารจีน</p></th></FONT> 
-        <p><font color="blue"><a href="เมนูอาหารฝรั่ง.html">เมนูอาหารฝรั่ง</p></th></FONT> 
+        <p><font color="blue"><a href="อาหารเย็น.html">เอาหารเย็น</p></th></FONT> 
         <p><font color="blue"><a href="เมนูอาหารมังสวิรัติ.html">เมนูอาหารมังสวิรัติ</p></th></FONT> 
         <p><font color="blue"><a href="เมนูอาหารเหนือ.html">เมนูอาหารเหนือ</p></th></FONT> 
         <p><font color="blue"><a href="เมนูแกง.html">เมนูแกง</p></th></FONT> 
-        <p><font color="blue"><a href="เมนูกับแกล้ม/อาหารว่าง.html">เมนูกับแกล้ม/อาหารว่าง</p></th></FONT> 
+        <p><font color="blue"><a href="อาหารเด็ก.html">อาหารเด็ก</p></th></FONT> 
         <p><font color="blue"><a href="เมนูก๋วยเตี๋ยว.html">เมนูก๋วยเตี๋ยว</p></th></FONT>  
         <p><font color="blue"><a href="เมนูซุป.html">เมนูซุป</p></th></FONT> 
         <p><font color="blue"><a href="เมนูสเต็ก.html">เมนูสเต็ก</p></th></FONT>  
@@ -150,11 +150,13 @@ mysqli_close($con);
         <p><font color="blue"><a href="เมนูอาหารภาคกลาง.html">เมนูอาหารภาคกลาง</p></th></FONT>  
         <p><font color="blue"><a href="เมนูอาหารอีสาน.html">เมนูอาหารอีสาน</p></th></FONT> 
         <p><font color="blue"><a href="เมนูอาหารเช้า.html">เมนูอาหารเช้า</p></th></FONT>  
-        <p><font color="blue"><a href="เมนูอาหารใต้.html">เมนูอาหารใต้</p></th></FONT> 
-        <p><font color="blue"><a href="เมนูอาหารไทย.html">เมนูอาหารไทย</p></th></FONT>  
-        <p><font color="blue"><a href="เมนูอาหารใต้.html">เมนูอาหารใต้</p></th></FONT> 
-        <p><font color="blue"><a href="เมนูอาหารไทย.html">เมนูอาหารไทย</p></th></FONT> 
-        <p><font color="blue"><a href="เมนูแซนด์วิช.html">เมนูแซนด์วิช</p></th></FONT>    
+        <p><font color="blue"><a href="สลัด.html">สลัด</p></th></FONT> 
+        <p><font color="blue"><a href="ของหวาน.html">ของหวาน</p></th></FONT>  
+        <p><font color="blue"><a href="ของว่าง.html">ของว่าง</p></th></FONT> 
+        <p><font color="blue"><a href="มนูอาหารอิตาเลียน.html">มนูอาหารอิตาเลียน</p></th></FONT> 
+        <p><font color="blue"><a href="กับแกล้ม.html">กับแกล้ม</p></th></FONT>  
+        <p><font color="blue"><a href="น้ำจิ้ม.html">น้ำจิ้ม</p></th></FONT>
+        <p><font color="blue"><a href="อาหารทำขาย.html">อาหารทำขาย</p></th></FONT> 
        </table>
 
      <br>

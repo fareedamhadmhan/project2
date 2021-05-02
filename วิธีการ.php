@@ -97,10 +97,10 @@
 
 
 //1. เชื่อมต่อ database: 
-include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include('connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
  
 //2. query ข้อมูลจากตาราง tb_member: 
-$query = "SELECT * FROM วิธีการทำ ORDER BY ชื่อวิธีการทำ  asc" or die("Error:" . mysqli_error()); 
+$query = "SELECT * FROM cook_method ORDER BY Bakery_drink_name asc" or die("Error:" . mysqli_error($con)); 
 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
 //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
@@ -108,7 +108,7 @@ $result = mysqli_query($con, $query);
 
 while($row = mysqli_fetch_array($result)) { 
   echo "<tr>";
-  echo "<td>" .$row["ชื่อวิธีการทำ"] .  "</td> "; 
+  echo "<td>" .$row["Bakery_drink_name"] .  "</td> "; 
 ;
   
 }

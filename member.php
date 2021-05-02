@@ -1,6 +1,6 @@
 
 <?php
-    include "connection.php";
+    include "connect.php";
     $sql = "SELECT * FROM `users` ";
     if( isset($_GET['search']) ){
     $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
@@ -97,7 +97,7 @@
                 </tr>
             </thead> 
             <?php
-                  include "connection.php";
+                  include "connect.php";
                   $sql = "SELECT * FROM `users` ";
                   if( isset($_GET['search']) ){
                   $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
