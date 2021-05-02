@@ -115,10 +115,10 @@ include'upload.php';
             
             $manu_name=$_POST['manu_name'];
             $Ingredients=$_POST['Ingredients'];
-            $Gastronomy=$_POST['cook'];
+            $cook=$_POST['cook'];
             $image=$_POST['image'];
-            $image=$_POST['for_people'];
-            $image=$_POST['explain'];
+            $for_people=$_POST['for_people'];
+            $explain=$_POST['explain'];
 
             $sql= "INSERT INTO `ตารางสูตรอาหาร` (`manu_name`, `Ingredients`, `cook`,`for_people`,'image','explain')
             VALUES ('$manu_name','$Ingredients','$cook','$image','$for_people','$explain')";
@@ -169,7 +169,7 @@ include'upload.php';
         <br><br>
         
         <label> อธิบายสั้น ๆ เกี่ยวกับเมนูนี้</label><br>
-        <textarea id="explain"  name="explain" rows="3" cols="100" placeholder="เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea>
+        <textarea id="explain"  name="explain" rows="2" cols="100" placeholder="เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea>
         <br><br>
 
        <label>สำหรับ</label><br>
