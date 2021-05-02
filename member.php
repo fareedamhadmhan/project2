@@ -90,10 +90,10 @@
                 <td><B>Email</B></td>
                 <td><B>Username</B></td>
                 <td><B>Password</B></td>
-                <!-- <td><B>Image</B></td> -->
+                <!-- <td><B>Profile</B></td>  -->
                 <td><B>Edit</B></td>
                 <td><B>delete</B></td>
-                <td><B>Addimge</B></td>
+                <td><B>Addimage</B></td>
                 </tr>
             </thead> 
             <?php
@@ -112,6 +112,7 @@
               
 
                 <tr>
+                    
                     <td align='center'><?php echo $row['email']; ?></td>
                     <td align='center'><?php echo $row['username']; ?></td>
                     <td align='center'><?php echo $row['password']; ?></td>
