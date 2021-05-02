@@ -105,7 +105,7 @@ include'upload.php';
 </head>
 
 <body>
-<h2 align="center">จัดการสูตรอาหาร</h2>
+<h2 align="center">จัดการสูตรอาหาร ➕</h2>
 
 
 <?php
@@ -143,7 +143,7 @@ include'upload.php';
   
 
 <table>
-        <h3 align="center"><U>เขียนสูตรอาหาร</U>➕</h3>
+        <!-- <h4 align="center"><U>เขียนสูตรอาหาร</U></h4> -->
         <form method="post">
         <div class="form-group" >
         <div class="col-sm-2" align="right"></div>
@@ -153,21 +153,17 @@ include'upload.php';
       </div>
   
       <div class="form-inline" align="center">
-      
-       
-        <img class="w-16 mx-auto pointer-events-none" src="//assets-global.cpcdn.com/assets/camera-e526534167ed86f4891b97ae3da7bb6327b7679a0ad7c9b837434847f8457434.png">
-    
-        <p class="text-cookpad-20 font-semibold mt-md">ใส่ภาพอาหารที่ทำเสร็จ</p>
-        <p class="text-cookpad-14">เป็นแรงบันดาลใจให้เพื่อนๆ ทำตามสูตรของเรา</p>
+        <p>ใส่ภาพอาหารที่ทำเสร็จ</p>
+        <p>เป็นแรงบันดาลใจให้เพื่อนๆ ทำตามสูตรของเรา</p>
 
         
        <!-- <label> Select Image File</label> -->
         <form action="upload.php" method="post" enctype="multipart/form-data">
         <input type="file" name="file" >
-        <input type="submit" value="upload" name="submit">
+        <!-- <input type="submit" value="upload" name="submit"> -->
         </form>
         <br><br>
-
+       
         <label> ชื่อเมนูอาหาร </label><br>
         <textarea id="manu_name"  name="manu_name" rows="2" cols="100" placeholder="กรอกชื่อเมนูอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea>
         <br><br>
@@ -185,13 +181,16 @@ include'upload.php';
         <br><br>
 
        <label>ส่วนผสม  </label><br>
-       <textarea  id="Ingredients" name="Ingredients" rows="8" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea>
+       <textarea  id="Ingredients" name="Ingredients" rows="2" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea>
+       &nbsp;<button class="btn btn-dark" type="button" title="ลบส่วนผสม"> ... </button><br>
+       <button class="btn btn-dark" type="button" onClick="blinkit()" > + เพิ่มส่วนผสม </button>
+   
         <br><br>
        <label>วิธีทำ </label><br>
-       <textarea id="cook" name="cook" rows="10" cols="100" placeholder="กรอกวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea>  
+       <textarea id="cook" name="cook" rows="2" cols="100" placeholder="กรอกวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea>  
+       &nbsp;<button class="btn btn-dark" type="button" title="ลบวิธีทำ"> ... </button><br>
+       <button class="btn btn-dark" type="button" onClick="blinkit()" > + เพิ่มวิธีทำ </button>
        <br><br>
-       
-
        </div> 
        </form>
 
@@ -213,9 +212,10 @@ include'upload.php';
        </form> -->
 
            
-    
-        <div class="form-inline" align="center">
+       
+      
         <FORM >
+        <div class="form-inline" align="center">
         <h4><B>&nbsp; หมวดหมู่อาหาร</B></h4>
         <p><i>เลือกแท็กที่เกี่ยวข้องกับเมนูนี้* </i></p>
         <p><B>&nbsp;<U>ประเภทอาหาร</B></U></p>
@@ -358,18 +358,20 @@ include'upload.php';
         <TD><INPUT TYPE=Checkbox Name=อาหารท้องถิ่น VALUE="อาหารใต้">อาหารใต้ &nbsp;</TD>
         <TD><INPUT TYPE=Checkbox Name=อาหารท้องถิ่น VALUE="อาหารกลาง">อาหารกลาง&nbsp;</TD>       
         </TABLE>
-        </FORM>
-      
+        </form> 
+              
 
        <br>
         <table align="center">
         <tr>
-          <td><h3 align="center"><button class="btn-success btn" type="submit" name="save" value="submit">เพิ่มสูตรอาหาร</button></h3></td>
-          <td><h3 align="center"><button class="btn btn-warning" type="submit" name="save" value="submit"><a href="updateสูตร.php" class="text-white">แก้ไขสูตรอาหาร</a></button></h3></td> 
-          <td><h3 align="center"><button class="btn btn-info"type="submit" name="save" value="submit"><a href="updateสูตรอาหาร.php" class="text-white">ดูรายการอาหารทั้งหมด</a></button></h3></td>
+         
+          <td><button class="btn-success btn" type="submit" name="save" value="submit">เพิ่มสูตรอาหาร </button></td>
+          <td><button class="btn btn-warning" type="submit" name="save" value="submit"><a href="updateสูตร.php" class="text-white">แก้ไขสูตรอาหาร</a></button></td> 
+          <td><button class="btn btn-danger" type="button" > ลบ </button></td>
+          <!-- <td><h3 align="center"><button class="btn btn-info"type="submit" name="save" value="submit"><a href="updateสูตรอาหาร.php" class="text-white">ดูรายการอาหารทั้งหมด</a></button></h3></td> -->
         </tr>
         </table>
-        
+<!--         
 <ul class="pager">
   <li> <a href="index.php" class="text-white"> ย้อนกลับ </a></li>
   <li><a href="index.php">กลับหน้าหลัก</a></li>
@@ -379,4 +381,4 @@ include'upload.php';
 </div>
 </table>
 </body>
-</html>
+</html> -->

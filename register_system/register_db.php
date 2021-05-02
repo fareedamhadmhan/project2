@@ -26,6 +26,7 @@
             array_push($errors, "The two passwords do not match");
             $_SESSION['error'] = "The two passwords do not match";
         }
+        //test
 
         $user_check_query = "SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1";
         $query = mysqli_query($conn, $user_check_query);
