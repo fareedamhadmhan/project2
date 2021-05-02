@@ -87,7 +87,7 @@
             </thead>
             
             <?php  
-                include 'connection.php';
+                include 'connect.php';
 
                 $query = "SELECT * FROM `system_admin` ORDER BY admin_Email asc";
                 $result = mysqli_query($con,$query);

@@ -86,7 +86,7 @@
 <h2 align="center">จัดการวัตถุดิบทดแทน</h2>
     
     <?php
-         include("connection.php");
+         include("connect.php");
          if(isset($_POST['save'])){
             
             
