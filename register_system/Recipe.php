@@ -140,7 +140,7 @@
           </tr>
           <tr><td><br></td></tr>
           <tr>
-            <td align="center"><input type="file" name="file" ></td>
+            <td align="center"><input type="file" name="fileupload" id="fileupload" ></td>
           </tr>
           <tr><td><br></td></tr>
           <tr>
