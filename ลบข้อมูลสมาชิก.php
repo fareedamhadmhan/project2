@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <?php
 //1. เชื่อมต่อ database: 
-include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้านี้
+include('connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้านี้
 //สร้างตัวแปรสำหรับรับค่า admin_Emailจากไฟล์แสดงข้อมูล
 $id= $_REQUEST["id"];
 
