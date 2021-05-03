@@ -14,6 +14,7 @@
     $fileupload = $_FILES["fileupload"]["tmp_name"];
     $filename = $_FILES['fileupload']['name'];
 
+    //uploadfile
     mkdir("upload/", 0755);
     if(!empty($menu_name)){
       mkdir("upload/".$menu_name."/", 0755);
