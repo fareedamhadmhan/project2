@@ -172,7 +172,7 @@
           </tr>
           <tr><td><br></td></tr>
           <tr>
-            <td align="center"><label>ส่วนผสม</label></td>
+            <td align="center"><label>ส่วนผสม / อุปกรณ์</label></td>
           </tr>
           <tr>
             <td align="center"><textarea  id="Ingredients" name="Ingredients" rows="2" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea></td>
@@ -200,157 +200,73 @@
                     <TD><INPUT TYPE=radio Name=food_type VALUE="2" id="food_type"> กับข้าว &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="3" id="food_type"> อาหารเย็น &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="4" id="food_type"> อาหารมังสวิรัติ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> น้ำจิ้ม &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> น้ำจิ้ม &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="6" id="food_type"> อาหารเหนือ &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="7" id="food_type"> แกง &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="8" id="food_type"> อาหารเด็ก &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="9" id="food_type"> ก๋วยเตี๋ยว &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="10" id="food_type"> ซุป &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> มุสลิม &nbsp;</TD> 
                   </tr>
                   <tr>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="11" id="food_type"> สเต็ก &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="12"id="food_type"> อาหารจานเดียว &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="13" id="food_type"> อาหารภาคกลาง &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="14"  id="food_type"> อาหารอีสาน&nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="15" id="food_type"> อาหารเช้า &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> เบเกอร์รี่ &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> เครื่องดื่ม &nbsp;</TD> 
                   </tr>
                   <tr>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="16" id="food_type"> สลัด &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="17"id="food_type"> ของหวาน &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="18" id="food_type"> ของว่าง &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=food_type VALUE="19" id="food_type"> กับแกล้ม &nbsp;</TD>
-                  </tr>
-              <tr><td><br></td></tr>
-              <tr>
-                <td><label>วัตถุดิบ</label></td>
-              </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="ขนมปังปิง" id="1"> ขนมปังปิง &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="อะโวคาโด" id="2"> อะโวคาโด &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูกุ้ง" id="3"> เมนูกุ้ง &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูชีส" id="4"> เมนูชีส &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูปลา" id="5"> เมนูปลา &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูปลาหมึก" id="6"> เมนูปลาหมึก &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูปู" id="7"> เมนูปู &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูผลไม้" id="8"> เมนูผลไม้ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูผัก" id="9"> เมนูผัก &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูสามชั้น" id="10"> เมนูสามชั้น &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูหมู"  id="11"> เมนูหมู &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูหอย" id="12"> เมนูหอย &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูอกไก่" id="13"> เมนูอกไก่ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูอาหารทะเล" id="14"> เมนูอาหารทะเล&nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูเต้าหู้" id="15"> เมนูเต้าหู้ &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูเนื้อวัว" id="16"> เมนูเนื้อวัว &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูเป็ด" id="17"> เมนูเป็ด &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูเป็ด" id="18"> เมนูเป็ด &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูเส้น" id="19"> เมนูเส้น &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูแซลมอน" id="20"> เมนูแซลมอน &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูไก่" id="21"> เมนูไก่ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูไข่" id="22"> เมนูไข่ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูไข่เค็ม" id="23"> เมนูไข่เค็ม &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูใส้กรอก" id="24"> เมนูใส้กรอก &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="หม้ออบลมร้อน" id="25"> หม้ออบลมร้อน &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="เมนูผัก" id="26"> เมนูผัก &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="ทะเล" id="27"> ทะเล &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="หม้อทอดไร้น้ำมัน" id="28"> หม้อทอดไร้น้ำมัน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=material VALUE="หม้อหุงข้าว" id="29"> หม้อหุงข้าว &nbsp;</TD>
-       
-                  </tr>
-              <tr><td><br></td></tr>
-              <tr>
-                <td><label>เบเกอรี่ และเครื่องดื่ม</label></td>
-              </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=bakery_drink VALUE="เค้ก" id="1"> เค้ก &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=bakery_drink VALUE="พาย" id="2"> พาย &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=bakery_drink VALUE="สูตรน้ำปั่น" id="3"> สูตรน้ำปั่น &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=bakery_drink VALUE="ค็อกเทล" id="4"> ค็อกเทล &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=bakery_drink VALUE="ขนมปัง" id="5"> ขนมปัง &nbsp;</TD>
-                  </tr>
-              <tr><td><br></td></tr>
-              <tr>
-                <td><label>อุปกรณ์/วิธีทำ</label></td>
-              </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูต้ม" id="1"> เมนูต้ม &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูทอด" id="2"> เมนูทอด &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูนึ่ง" id="3"> เมนูนึ่ง &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูผัด" id="4"> เมนูผัด &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูยำ" id="5"> เมนูยำ &nbsp;</TD>
-                  </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูย่าง" id="6"> เมนูย่าง &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูหม้อหุงข้าว" id="7"> เมนูหม้อหุงข้าว &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูหม้ออบลมร้อน" id="8"> เมนูหม้ออบลมร้อน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูอบ" id="9"> เมนูอบ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=cook_method VALUE="เมนูไมโครเวฟ" id="10"> เมนูไมโครเวฟ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> คลีน &nbsp;</TD> 
                   </tr>
               <tr><td><br></td></tr>
               <tr>
                 <td width="20%"><label>วันเทศกาล/วันสำคัญ</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="เทศกาลเจ" id="1"> เทศกาลเจ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="วันแม่แห่งชาติ " id="2"> วันแม่แห่งชาติ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="วาเลนไทน์" id="3"> วาเลนไทน์ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="วันคริสมาสต์" id="4"> วันคริสมาสต์ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="วันสงกรานต์" id="5"> วันสงกรานต์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="1" id="1"> เทศกาลเจ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="2 " id="2"> วันแม่แห่งชาติ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="3" id="3"> วาเลนไทน์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="4" id="4"> วันคริสมาสต์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="5" id="5"> วันสงกรานต์ &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="ตรุษจีน" id="6"> ตรุษจีน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="ฮัลโลวีน" id="7"> ฮัลโลวีน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=Day VALUE="ปาร์ตี้" id="8"> ปาร์ตี้ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="6" id="6"> ตรุษจีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="7" id="7"> ฮัลโลวีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="8" id="8"> ปาร์ตี้ &nbsp;</TD>
                   </tr>
               <tr><td><br></td></tr>
               <tr>
                 <td><label>นานาชาติ</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารไทย" id="1"> อาหารไทย &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารจีน" id="2"> อาหารจีน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารญี่ปุ่น" id="3"> อาหารญี่ปุ่น &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารเวียดนาม" id="4"> อาหารเวียดนาม &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารอิตาลี" id="5"> อาหารอิตาลี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="1" id="1"> อาหารไทย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="2" id="2"> อาหารจีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="3" id="3"> อาหารญี่ปุ่น &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="4" id="4"> อาหารเวียดนาม &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="5" id="5"> อาหารอิตาลี &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารตุรกี" id="6"> อาหารตุรกี &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารอินเดีย" id="7"> อาหารอินเดีย &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารมาเลเซีย" id="8"> อาหารมาเลเซีย &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารฟิลิปปินส์" id="9"> อาหารฟิลิปปินส์ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=international VALUE="อาหารเกาหลี" id="10"> อาหารเกาหลี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="6" id="6"> อาหารตุรกี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="7" id="7"> อาหารอินเดีย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="8" id="8"> อาหารมาเลเซีย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="9" id="9"> อาหารฟิลิปปินส์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="10" id="10"> อาหารเกาหลี &nbsp;</TD>
                   </tr>
+
               <tr><td><br></td></tr>
               <tr>
-                <td><label>สุขภาพ/ลดน้ำหนัก</label></td>
+                <td><label>ภูมิภาคอาหาร</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=Checkbox Name=health VALUE="คลีน"  id="1"> คลีน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=health VALUE="มังสวิรัติ" id="2"> มังสวิรัติ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=health VALUE="ไร้แป้ง" id="3"> ไร้แป้ง &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=health VALUE="ไขมันต่ำ" id="4"> ไขมันต่ำ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=health VALUE="โปรตีน" id="5"> โปรตีน&nbsp;</TD>
-                  </tr>
-              <tr><td><br></td></tr>
-              <tr>
-                <td><label>อาหารท้องถิ่น</label></td>
-              </tr>
-                  <tr>
-                    <TD><INPUT TYPE=Checkbox Name=local_food VALUE="อาหารอีสาน"  id="1"> อาหารอีสาน &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=local_food VALUE="อาหาเหนือ" id="2"> อาหาเหนือ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=local_food VALUE="อาหารใต้" id="3">  อาหารใต้ &nbsp;</TD>
-                    <TD><INPUT TYPE=Checkbox Name=local_food VALUE="อาหารกลาง" id="4"> อาหารกลาง&nbsp;</TD>  
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="1"  id="1"> อาหารอีสาน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="2" id="2"> อาหาเหนือ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="3" id="3">  อาหารใต้ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="4" id="4"> อาหารกลาง&nbsp;</TD>  
                   </tr>
                   <tr><td><br></td></tr>
                   <tr><td><br></td></tr>
@@ -383,19 +299,5 @@
             processData: false
         });
     }
-    // function edit_menu(){
-    //   var formData = new FormData(document.forms.namedItem("data"));
-    //   $.ajax({
-    //         url: "edit_menu.php",
-    //         type: 'POST',
-    //         data: formData,
-    //         async: false,
-    //         success: function(data) {
-    //         },
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false
-    //     });
-    // }
     
   </script>
