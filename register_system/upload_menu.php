@@ -4,7 +4,7 @@
 
 <?php
     
-    $menu_name      = $_POST["manu_name"];
+    $menu_name      = $_POST["menu_name"];
     $explain        = $_POST["explain"];
     $number_p       = $_POST["number_p"];
     $time           = $_POST["time"];
@@ -45,7 +45,7 @@
       $menu_name = "";
     }
     
-    $sql_menu= "INSERT INTO `menu` (`manu_name`, `Ingredients`, `cook`,`explain`,`for_people`,`food_type`,`international`,`fastival`,`local_food`) VALUES ('$menu_name','$Ingredients','$cook','$explain','$number_p','$food_type','$international','$fastival','$local_food')"; 
+    $sql_menu= "INSERT INTO `menu` (`menu_name`, `Ingredients`, `cook`,`explain`,`for_people`,`food_type`,`international`,`fastival`,`local_food`) VALUES ('$menu_name','$Ingredients','$cook','$explain','$number_p','$food_type','$international','$fastival','$local_food')"; 
     $sql_file= "INSERT INTO `attach_file` (`menu_name`,`path_file`,`add_date`) VALUES ('$menu_name','$uploadfile','$date')";
 
     $con->query($sql_menu);

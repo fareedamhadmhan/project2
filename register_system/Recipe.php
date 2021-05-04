@@ -103,34 +103,7 @@
 </head>
 
 <!-- กรอกข้อมูล -->
-<h2 align="center">จัดการสูตรอาหาร ➕</h2>
-<?php  
-        // if(isset($_POST['save'])){
-            
-        //     $manu_name=$_POST['manu_name'];
-        //     $Ingredients=$_POST['Ingredients'];
-        //     $cook=$_POST['cook'];
-        //     $image=$_POST['image'];
-        //     $for_people=$_POST['for_people'];
-        //     $explain=$_POST['explain'];
-
-        //     $sql= "INSERT INTO `ตารางสูตรอาหาร` (`manu_name`, `Ingredients`, `cook`,`for_people`,'image','explain')
-        //     VALUES ('$manu_name','$Ingredients','$cook','$image','$for_people','$explain')";
-           
-        //         if(mysqli_query($con,$sql)){
-        //             echo "<script type='text/javascript','varchar(50)/javascript'>";
-        //             echo "<img src='ตารางสูตรอาหาร/".$row['image']."' >";
-        //             echo"<p>".$row['image']."</p>";
-        //             echo "alert('บันทึกข้อมูลเรียบร้อย !')";
-        //             echo "window.location='index.php';";
-        //             echo "</script>";
-        //         }else{
-        //              echo "error : " . $sql . "
-        //         " .mysqli_error($con);
-        //         }
-        //         mysqli_close($con);  
-        // }
-    ?>  
+<h2 align="center">จัดการสูตรอาหาร ➕</h2> 
 
   <form id="data" method="post" action="" enctype="multipart/form-data">
     <center>
@@ -147,7 +120,8 @@
             <td align="center"><label> ชื่อเมนูอาหาร </label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="manu_name"  name="manu_name" rows="2" cols="100" placeholder="กรอกชื่อเมนูอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
+            <td align="center"><textarea id="menu_name"  name="menu_name" rows="2" cols="100" placeholder="กรอกชื่อเมนูอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
+            <td>&nbsp;&nbsp;<button class="btn btn-light" id="search">ค้นหา</button></td>
           </tr>
           <tr><td><br></td></tr>
           <tr>
