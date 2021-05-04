@@ -66,12 +66,12 @@
      <ul class="nav nav-pills nav-stacked">
      <li><a href="../index.php" class="text-white">หน้าหลัก</a></li>
      <li class="active"><a href="Recipe.php" class="text-white"><U>จัดการสูตรอาหาร</U></a></li>
-     <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
-     <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <li><a href="../ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
+     <li><a href="../วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
+     <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
-     <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
-     <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li> 
+     <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
+     <li><a href="../member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li> 
      </ul><br>
      
      <form action="" method="get">
@@ -172,70 +172,70 @@
                 <td><label>ประเภทอาหาร</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="1" id="food_type"> น้ำพริก &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="2" id="food_type"> กับข้าว &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="3" id="food_type"> อาหารเย็น &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="4" id="food_type"> อาหารมังสวิรัติ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> น้ำจิ้ม &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="1"> น้ำพริก &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="2"> กับข้าว &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="3"> อาหารเย็น &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="4"> อาหารมังสวิรัติ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"> น้ำจิ้ม &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="7" id="food_type"> แกง &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="8" id="food_type"> อาหารเด็ก &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="9" id="food_type"> ก๋วยเตี๋ยว &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="10" id="food_type"> ซุป &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> มุสลิม &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="7"> แกง &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="8"> อาหารเด็ก &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="9"> ก๋วยเตี๋ยว &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="10"> ซุป &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"> มุสลิม &nbsp;</TD> 
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="11" id="food_type"> สเต็ก &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="12"id="food_type"> อาหารจานเดียว &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="15" id="food_type"> อาหารเช้า &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> เบเกอร์รี่ &nbsp;</TD> 
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> เครื่องดื่ม &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="11"> สเต็ก &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="12"> อาหารจานเดียว &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="15"> อาหารเช้า &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"> เบเกอร์รี่ &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"> เครื่องดื่ม &nbsp;</TD> 
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="16" id="food_type"> สลัด &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="17"id="food_type"> ของหวาน &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="18" id="food_type"> ของว่าง &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="19" id="food_type"> กับแกล้ม &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"id="food_type"> คลีน &nbsp;</TD> 
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="16"> สลัด &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="17"> ของหวาน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="18"> ของว่าง &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="19"> กับแกล้ม &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=food_type VALUE="5"> คลีน &nbsp;</TD> 
                   </tr>
               <tr><td><br></td></tr>
               <tr>
                 <td width="20%"><label>วันเทศกาล/วันสำคัญ</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="1" id="1"> เทศกาลเจ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="2 " id="2"> วันแม่แห่งชาติ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="3" id="3"> วาเลนไทน์ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="4" id="4"> วันคริสมาสต์ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="5" id="5"> วันสงกรานต์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="1"> เทศกาลเจ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="2"> วันแม่แห่งชาติ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="3"> วาเลนไทน์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="4"> วันคริสมาสต์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="5"> วันสงกรานต์ &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="6" id="6"> ตรุษจีน &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="7" id="7"> ฮัลโลวีน &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="8" id="8"> ปาร์ตี้ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=fastival VALUE="9" id="8"> อื่นๆ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="6"> ตรุษจีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="7"> ฮัลโลวีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="8"> ปาร์ตี้ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="9"> อื่นๆ &nbsp;</TD>
                   </tr>
               <tr><td><br></td></tr>
               <tr>
                 <td><label>นานาชาติ</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=international VALUE="1" id="1"> อาหารไทย &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="2" id="2"> อาหารจีน &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="3" id="3"> อาหารญี่ปุ่น &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="4" id="4"> อาหารเวียดนาม &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="5" id="5"> อาหารอิตาลี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="1"> อาหารไทย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="2"> อาหารจีน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="3"> อาหารญี่ปุ่น &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="4"> อาหารเวียดนาม &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="5"> อาหารอิตาลี &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=international VALUE="6" id="6"> อาหารตุรกี &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="7" id="7"> อาหารอินเดีย &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="8" id="8"> อาหารมาเลเซีย &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="9" id="9"> อาหารฟิลิปปินส์ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=international VALUE="10" id="10"> อาหารเกาหลี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="6"> อาหารตุรกี &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="7"> อาหารอินเดีย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="8"> อาหารมาเลเซีย &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="9"> อาหารฟิลิปปินส์ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="10"> อาหารเกาหลี &nbsp;</TD>
                   </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=international VALUE="6" id="6"> อื่นๆ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=international VALUE="6"> อื่นๆ &nbsp;</TD>
                   </tr>
 
               <tr><td><br></td></tr>
@@ -243,10 +243,10 @@
                 <td><label>ภูมิภาคอาหาร</label></td>
               </tr>
                   <tr>
-                    <TD><INPUT TYPE=radio Name=local_food VALUE="1"  id="1"> อาหารอีสาน &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=local_food VALUE="2" id="2"> อาหาเหนือ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=local_food VALUE="3" id="3">  อาหารใต้ &nbsp;</TD>
-                    <TD><INPUT TYPE=radio Name=local_food VALUE="4" id="4"> อาหารกลาง&nbsp;</TD>  
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="1"> อาหารอีสาน &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="2"> อาหาเหนือ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="3">  อาหารใต้ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=local_food VALUE="4"> อาหารกลาง&nbsp;</TD>  
                   </tr>
                   <tr><td><br></td></tr>
             </table>
