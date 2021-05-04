@@ -104,9 +104,11 @@
 
 <!-- กรอกข้อมูล -->
 <h2 align="center">จัดการสูตรอาหาร ➕</h2> 
+<div id="divShow"></div>
 
+<center>
   <form id="data" method="post" action="" enctype="multipart/form-data">
-    <center>
+ 
         <table border="0">
           <tr>
             <td align="center">ใส่ภาพอาหารที่ทำเสร็จ เป็นแรงบันดาลใจให้เพื่อนๆ ทำตามสูตรของเรา</td>
@@ -121,7 +123,7 @@
           </tr>
           <tr>
             <td align="center"><textarea id="menu_name"  name="menu_name" rows="2" cols="100" placeholder="กรอกชื่อเมนูอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
-            <td>&nbsp;&nbsp;<button class="btn btn-light" id="search">ค้นหา</button></td>
+            <!-- <td>&nbsp;&nbsp;<button class="btn btn-light" onclick="search()">ค้นหา</button></td> -->
           </tr>
           <tr><td><br></td></tr>
           <tr>
@@ -247,19 +249,22 @@
                     <TD><INPUT TYPE=radio Name=local_food VALUE="4" id="4"> อาหารกลาง&nbsp;</TD>  
                   </tr>
                   <tr><td><br></td></tr>
-                  <tr><td><br></td></tr>
-                  <tr>
-                    <td  width="20%"><button class="btn-success btn" name="save" id="add" value="add" onclick="upload_menu()">เพิ่มสูตรอาหาร </button></td>
-                    <!-- <td  width="20%"><button class="btn btn-warning"  name="edit" value="edit" onclick="edit_menu()">แก้ไขสูตรอาหาร</button></td>
-                    <td  width="20%"><button class="btn btn-danger" > ลบ </button></td> -->
-                  </tr>
             </table>
             </td>
           </tr>
         </table>
-    </center>
   </form>
 
+  <table border="0">
+    <tr>
+      <td  width="20%" align="center"><button class="btn-success btn" name="add"  onclick="upload_menu()">เพิ่มสูตรอาหาร </button></td>
+      <td  width="20%" align="center"><button class="btn btn-warning" name="edit" onclick="edit_menu()">แก้ไขสูตรอาหาร</button></td>
+      <td  width="20%" align="center"><button class="btn btn-danger"  name="edit" onclick="delete_menu()"> ลบ </button></td>
+    </tr>
+  </table>
+  </center>
+  <br>
+  <div id="show"></div>
 
   <script>
 
@@ -271,11 +276,23 @@
             data: formData,
             async: false,
             success: function(data) {
+              $("#show").html("กำลังบันทึกข้อมูล");
+              if(data = "success"){
+                $("#show").html("<div class='alert alert-success'>&nbsp;&nbsp;&nbsp;บันทึกข้อมูลเรียบร้อย</div>");
+              }
             },
             cache: false,
             contentType: false,
             processData: false
         });
+    }
+
+    function edit_menu(){
+      window.open('edit_menu.php', '_blank');
+    }
+
+    function delete_menu(){
+      window.open('delete_menu.php', '_blank');
     }
     
   </script>
