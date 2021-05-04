@@ -103,35 +103,12 @@
 </head>
 
 <!-- กรอกข้อมูล -->
+
+<?php
+  echo $_POST["menu_name"];
+?>
+
 <h2 align="center">จัดการสูตรอาหาร ➕</h2>
-<?php  
-        // if(isset($_POST['save'])){
-            
-        //     $manu_name=$_POST['manu_name'];
-        //     $Ingredients=$_POST['Ingredients'];
-        //     $cook=$_POST['cook'];
-        //     $image=$_POST['image'];
-        //     $for_people=$_POST['for_people'];
-        //     $explain=$_POST['explain'];
-
-        //     $sql= "INSERT INTO `ตารางสูตรอาหาร` (`manu_name`, `Ingredients`, `cook`,`for_people`,'image','explain')
-        //     VALUES ('$manu_name','$Ingredients','$cook','$image','$for_people','$explain')";
-           
-        //         if(mysqli_query($con,$sql)){
-        //             echo "<script type='text/javascript','varchar(50)/javascript'>";
-        //             echo "<img src='ตารางสูตรอาหาร/".$row['image']."' >";
-        //             echo"<p>".$row['image']."</p>";
-        //             echo "alert('บันทึกข้อมูลเรียบร้อย !')";
-        //             echo "window.location='index.php';";
-        //             echo "</script>";
-        //         }else{
-        //              echo "error : " . $sql . "
-        //         " .mysqli_error($con);
-        //         }
-        //         mysqli_close($con);  
-        // }
-    ?>  
-
   <form id="data" method="post" action="" enctype="multipart/form-data">
     <center>
         <table border="0">
@@ -154,7 +131,7 @@
             <td align="center"><label> อธิบายสั้น ๆ เกี่ยวกับเมนูนี้</label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="explain"  name="explain" rows="2" cols="100" placeholder="เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
+            <td align="center"><textarea id="explain"  name="explain" rows="2" cols="100" placeholder="เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control ">Test</textarea></td>
           </tr>
           <tr><td><br></td></tr>
           <tr>
@@ -356,7 +333,7 @@
                   <tr><td><br></td></tr>
                   <tr>
                     <td  width="20%"><button class="btn-success btn" name="save" id="add" value="add" onclick="upload_menu()">เพิ่มสูตรอาหาร </button></td>
-                    <!-- <td  width="20%"><button class="btn btn-warning"  name="edit" value="edit" onclick="edit_menu()">แก้ไขสูตรอาหาร</button></td>
+                    <!-- <td  width="20%"><button class="btn btn-warning"  name="edit" value="edit">แก้ไขสูตรอาหาร</button></td>
                     <td  width="20%"><button class="btn btn-danger" > ลบ </button></td> -->
                   </tr>
             </table>
@@ -383,19 +360,5 @@
             processData: false
         });
     }
-    // function edit_menu(){
-    //   var formData = new FormData(document.forms.namedItem("data"));
-    //   $.ajax({
-    //         url: "edit_menu.php",
-    //         type: 'POST',
-    //         data: formData,
-    //         async: false,
-    //         success: function(data) {
-    //         },
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false
-    //     });
-    // }
     
   </script>
