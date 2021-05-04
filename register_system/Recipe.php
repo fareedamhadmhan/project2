@@ -238,6 +238,7 @@
                     <TD><INPUT TYPE=radio Name=fastival VALUE="6" id="6"> ตรุษจีน &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=fastival VALUE="7" id="7"> ฮัลโลวีน &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=fastival VALUE="8" id="8"> ปาร์ตี้ &nbsp;</TD>
+                    <TD><INPUT TYPE=radio Name=fastival VALUE="9" id="8"> อื่นๆ &nbsp;</TD>
                   </tr>
               <tr><td><br></td></tr>
               <tr>
@@ -256,6 +257,9 @@
                     <TD><INPUT TYPE=radio Name=international VALUE="8" id="8"> อาหารมาเลเซีย &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=international VALUE="9" id="9"> อาหารฟิลิปปินส์ &nbsp;</TD>
                     <TD><INPUT TYPE=radio Name=international VALUE="10" id="10"> อาหารเกาหลี &nbsp;</TD>
+                  </tr>
+                  <tr>
+                    <TD><INPUT TYPE=radio Name=international VALUE="6" id="6"> อื่นๆ &nbsp;</TD>
                   </tr>
 
               <tr><td><br></td></tr>
