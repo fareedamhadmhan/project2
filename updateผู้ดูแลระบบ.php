@@ -11,11 +11,11 @@ $password = "";
 $databasename = "project2";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $databasename );
-mysqli_query($conn, "SET NAMES 'utf8' ");
+$con = new mysqli($servername, $username, $password, $databasename );
+mysqli_query($con, "SET NAMES 'utf8' ");
 
 if(count($_POST)>0) {                                  	
-mysqli_query($conn,"UPDATE system_admin set admin_Email = '" . $_POST['admin_Email'] . "', admin_User = '" . $_POST['admin_User'] . "',
+mysqli_query($con,"UPDATE system_admin set admin_Email = '" . $_POST['admin_Email'] . "', admin_User = '" . $_POST['admin_User'] . "',
 admin_Password = '" . $_POST['admin_Password'] . "' WHERE admin_Email  ='". $_POST['admin_Email'] . "'");
 
 echo "<script type='text/javascript'>";
@@ -24,7 +24,7 @@ echo "window.location= 'ผู้ดูแลระบบ.php';";
 echo "</script>";
 }
 
-$result = mysqli_query($conn,"SELECT * FROM system_admin WHERE admin_Email ='" . $_GET['admin_Email'] . "'");
+$result = mysqli_query($con,"SELECT * FROM system_admin WHERE admin_Email ='" . $_GET['admin_Email'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
 

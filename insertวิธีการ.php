@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">    
   <head>
-    <title>ระบบแนะนำเมนูอาหารจากวันหมดอายุ</title>
+    <title>Cooking World</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -53,42 +54,30 @@
      <ul class="nav nav-pills nav-stacked">
      <li><a href="สูตรอาหาร.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
-     <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li class="active"><a href="วิธีการ.php" class="text-white"><U>จัดการวิธีการ</U></a></li>
-     <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li>
+     <li class="active"><a href="วัตถุดิบ.php" class="text-white"><U>จัดการวัตถุดิบ</U></a></li>
+     <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
      <li><a href="index.php" class="text-white">หน้าหลัก</a></li>
-  
   </ul><br>
-      <div class="input-group" class="text-dark">
-        <form action="#" method="post">
-     
-         <?php
-	         $strAction = isset($_GET['Action']) ? $_GET['Action'] : '';
-	        if($strAction == "Save")
-	        {
-	       	// Statement
-	        }
-         ?>
-  
-        <label>ค้นหาสมาชิก</label>
-        <input type="text" placeholder="กรุณากรอกรหัสผ่าน" name="search">
-        <input type="submit" value="Search" name="btn" class="btn btn-sm btn-primary" >
-      </form>
-      </div>
-      </div>
-
+  <form action="" method="get">
+      <label>ค้นหาเมนูอาหาร</label>
+      <div class="input-group" class="text-dark" bgcolor="#FF3366">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
+        <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
+    </form>
+    </div>
+    </div>
 <meta charset= "utf-8">
 <title>INSERT</title>
 <?php
-        include 'connection.php';
+        include 'connect.php';
        
         if(isset($_POST['save'])){
             
-            $ชื่อวิธีการทำ=$_POST['ชื่อวิธีการทำ'];
+            $cook_method_name=$_POST['cook_method_name'];
     
-            $sql= "INSERT IGNORE INTO `วิธีการทำ`(`ชื่อวิธีการทำ`) VALUES ('$ชื่อวิธีการทำ')";
+            $sql= "INSERT IGNORE INTO `cook_method`(`cook_method_name`) VALUES ('$cook_method_name')";
            
                 if(mysqli_query($con,$sql)){
                     echo "<script type='varchar(50)/javascript'>";
@@ -102,13 +91,13 @@
                 mysqli_close($con);  
         }
     ?> 
-     <body>
+ <body>
      <h2 aling="center"><font color="red">ตารางเพิ่มชื่อวิธีการทำอาหารดังนี้ </font></h2>
         <form acetion="#" method="post">
         <div class="form-group">
         <div class="form-inline">
        <label >ชื่อวิธีการ : </label><br>
-        <textarea id="ชื่อวิธีการทำ"  name="ชื่อวิธีการทำ" rows="5" cols="130" placeholder="กรุณากรอกชื่อ อุปกรณ์/วิธีทำ อาหารของคุณ" style="resize:none" input type="varchar(50)" class="form-control "></textarea>
+        <textarea id="cook_method_name"  name="ชื่อวิธีการทำ" rows="5" cols="130" placeholder="กรุณากรอกชื่อ อุปกรณ์/วิธีทำ อาหารของคุณ" style="resize:none" input type="varchar(50)" class="form-control "></textarea>
         <br><br>
      <tr aling="center">
         <button class="btn btn-info"><a href="index.php">หน้าหลัก</a></button>

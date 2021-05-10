@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">    
   <head>
-    <title>ระบบแนะนำเมนูอาหารจากวันหมดอายุ</title>
+    <title>Cooking World</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -47,42 +47,31 @@
     <div class="col-sm-3 sidenav">
     <h1 align="center">Cooking World</h1>
     <h1 align="center">ทุกมื้อให้เราดูแลคุณ</h1>  
-     <!-- <h1 align="center">Clear Fridge</h1>
-     <h1 align="center">ระบบแนะนำเมนูอาหาร</h1>  
-     <h1 align="center">จากวันหมดอายุ</h1>  
-     <ul class="nav nav-pills nav-stacked"> -->
+    <!-- <h1 align="center">Clear Fridge</h1>
+    <h1 align="center">ระบบแนะนำเมนูอาหาร</h1>  
+    <h1 align="center">จากวันหมดอายุ</h1>   -->
+     <ul class="nav nav-pills nav-stacked">
      <li><a href="สูตรอาหาร.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
      <li class="active"><a href="วัตถุดิบ.php" class="text-white"><U>จัดการวัตถุดิบ</U></a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
      <li><a href="index.php" class="text-white">หน้าหลัก</a></li>
   
   </ul><br>
-      <div class="input-group" class="text-dark">
-        <form action="#" method="post">
-     
-         <?php
-	         $strAction = isset($_GET['Action']) ? $_GET['Action'] : '';
-	        if($strAction == "Save")
-	        {
-	       	// Statement
-	        }
-         ?>
-  
-        <label>ค้นหาสมาชิก</label>
-        <input type="text" placeholder="กรุณากรอกรหัสผ่าน" name="search">
-        <input type="submit" value="Search" name="btn" class="btn btn-sm btn-primary" >
-      </form>
-      </div>
-      </div>
-
+  <form action="" method="get">
+      <label>ค้นหาเมนูอาหาร</label>
+      <div class="input-group" class="text-dark" bgcolor="#FF3366">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
+        <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
+    </form>
+    </div>
+    </div>
 <meta charset= "utf-8">
 <title>INSERT</title>
 <?php
-        include 'connection.php';
+        include 'connect.php';
        
         if(isset($_POST['save'])){
             
