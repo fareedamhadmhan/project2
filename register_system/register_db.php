@@ -49,7 +49,7 @@
             //  $file_destination = 'C:/xampp\htdocs\project2\register_system' . $file_name;
             //  move_uploaded_file($file_tmp, $file_destination);
 
-            $sql = "INSERT INTO users (username, email,password) VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO users (username, email,password,status) VALUES ('$username', '$email', '$password','U')";
             mysqli_query($conn, $sql);
 
             $_SESSION['username'] = $username;

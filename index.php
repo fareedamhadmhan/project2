@@ -76,12 +76,11 @@
       <form action="" method="get">
       <label>ค้นหาเมนูอาหาร</label>
       <div class="input-group" class="text-dark" bgcolor="#FF3366">
-        <input type="text"  SIZE="42" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,นานาชาติ,สุขภาพ/ลดน้ำหนัก,เบเกอรี่ และเครื่องดื่ม" name="search1">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
         <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
     </form>
     </div>
     </div>
-    
 
       <?php
     if (isset($_REQUEST['search']) && $_REQUEST['search'] == "ค้นหา"){
@@ -125,41 +124,41 @@
          <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">                 
          <tr> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูน้ำพริก" /></p>
-            <p align="center"><a href="เมนูน้ำพริก.html">เมนูน้ำพริก</a></p></th>
+            <p align="center"><a href="เมนูน้ำพริก.html">น้ำพริก</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูกับข้าว" /></p>
-            <p align="center"><a href="เมนูกับข้าว.html">เมนูกับข้าว</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารจีน" /></p>
-            <p align="center"><a href="เมนูอาหารจีน.html">เมนูอาหารจีน</a></p></th>
+            <p align="center"><a href="เมนูกับข้าว.html">กับข้าว</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเย็น" /></p>
             <p align="center"><a href="อาหารเย็น.html"> อาหารเย็น</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารมังสวิรัติ" /></p>
-            <p align="center"><a href="เมนูอาหารมังสวิรัติ.html">เมนูอาหารมังสวิรัติ</a></p></th>
+            <p align="center"><a href="เมนูอาหารมังสวิรัติ.html">อาหารมังสวิรัติ</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="น้ำจิ้ม" /></p>
+            <p align="center"><a href="น้ำจิ้ม.html">น้ำจิ้ม</a></p></th>
         </tr> 
 
          <tr>  
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารเหนือ" /></p> 
-            <p align="center"><a href="เมนูอาหารเหนือ.html">เมนูอาหารเหนือ</p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูแกง" /></p> 
-            <p align="center"><a href="เมนูแกง.html">เมนูแกง</p></th>
+            <p align="center"><a href="เมนูแกง.html">แกง</p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเด็ก " /></p> 
             <p align="center"><a href="อาหารเด็ก.html">อาหารเด็ก </p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูก๋วยเตี๋ยว" /></p> 
-            <p align="center"><a href="เมนูก๋วยเตี๋ยว.html">เมนูก๋วยเตี๋ยว</p></th> 
+            <p align="center"><a href="เมนูก๋วยเตี๋ยว.html">ก๋วยเตี๋ยว</p></th> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูซุป" /></p> 
-            <p align="center"><a href="เมนูซุป.html">เมนูซุป</p></th>
+            <p align="center"><a href="เมนูซุป.html">ซุป</p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูซุป" /></p> 
+            <p align="center"><a href="มุสลิม.html">มุสลิม</p></th>
         </tr> 
 
         <tr>  
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูสเต็ก" /></p> 
-          <p  align="center"><a href="เมนูสเต็ก.html">เมนูสเต็ก</p></th> 
+          <p  align="center"><a href="เมนูสเต็ก.html">สเต็ก</p></th> 
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารจานเดียว" /></p> 
-          <p align="center"><a href="อาหารจานเดียว.html">เมนูอาหารจานเดียว</p></th>
-          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารภาคกลาง" /></p> 
-          <p align="center"><a href="อาหารกลาง.html">เมนูอาหารภาคกลาง</p></th>
-          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารอีสาน" /></p> 
-          <p align="center"><a href="เมนูอาหารอีสาน.html">เมนูอาหารอีสาน</p></th>
-          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารเช้า" /></p> 
-          <p align="center"><a href="เมนูอาหารเช้า.html">เมนูอาหารเช้า</p></th>
+          <p align="center"><a href="อาหารจานเดียว.html">อาหารจานเดียว</p></th>
+          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเช้า" /></p> 
+          <p align="center"><a href="อาหารเช้า.html">อาหารเช้า</p></th>
+          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เบเกอร์รี่" /></p> 
+          <p align="center"><a href="เบเกอร์รี่.html">เบเกอร์รี่</p></th>
+          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เครื่องดื่ม" /></p> 
+          <p align="center"><a href="เครื่องดื่ม.html">เครื่องดื่ม </p></th>
         </tr> 
 
         <tr> 
@@ -169,92 +168,87 @@
          <p align="center"><a href="ของหวาน.html">ของหวาน</p></th>
          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ของว่าง" /></p> 
          <p align="center"><a href="ของว่าง.html">ของว่าง</p></th>
-         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารอิตาเลียน" /></p> 
-         <p align="center"><a href="เมนูอาหารอิตาเลียน.html">เมนูอาหารอิตาเลียน</p></th>
          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt=" กับแกล้ม" /></p> 
-         <p align="center"><a href=" กับแกล้ม.html"> กับแกล้ม</p></th>  
+         <p align="center"><a href="กับแกล้ม.html"> กับแกล้ม</p></th>  
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="คลีน" /></p> 
+         <p align="center"><a href="คลีน.html">คลีน</p></th>
         </tr>   
-        <tr> 
-         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="น้ำจิ้ม" /></p> 
-         <p align="center"><a href="น้ำจิ้ม.html">น้ำจิ้ม</p></th>
-         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารทำขาย" /></p> 
-         <p align="center"><a href="อาหารทำขาย.html">อาหารทำขาย</p></th>
-        
-        
-        </tr>   
+        <tr>  
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ไร้แป้ง" /></p>
+         <p align="center"><a href="ไร้แป้ง.html">ไร้แป้ง</a></p></th>  
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ไขมันต่ำ" /></p>
+         <p align="center"><a href="ไขมันต่ำ.html">ไขมันต่ำ</a></p></th>  
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="โปรตีน" /></p>
+         <p align="center"><a href="โปรตีน.html">โปรตีน</a></p></th> 
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูฟิวชั่น" /></p>
+         <p align="center"><a href="เมนูฟิวชั่น.html">ฟิวชั่น </a></p></th> 
+         <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
+         <p align="center"><a href="อื่นๆประเภทอาหาร.html"> อื่นๆ </a></p></th>
+        </tr>  
 
-      </table>
+       </table>
 
-         <h4><font color="#696969"><B><U>วัตถุดิบ</U></B></h4></FONT>
+          <h4><font color="#696969"><B><U>วัตถุดิบ</U></B></h4></FONT>
          <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
          <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ขนมปังปิง" /></p>
             <p align="center"><a href="ขนมปังปิง.html">ขนมปังปิง</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอะโวคาโด" /></p>
-            <p align="center"><a href="อะโวคาโด.html">อะโวคาโด</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูกุ้ง" /></p>
-            <p align="center"><a href="เมนูกุ้ง.html">เมนูกุ้ง</a></p></th>
+            <p align="center"><a href="เมนูกุ้ง.html">กุ้ง</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูชีส" /></p>
-            <p align="center"><a href="เมนูชีส.html">เมนูชีส</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหอย" /></p>
-            <p align="center"><a href="เมนูหอย.html">เมนูหอย</a></th>
-          </tr>
-          <tr>   
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปลาหมึก" /></p>
-            <p align="center"><a href="เมนูปลาหมึก.html">เมนูปลาหมึก</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปู" /></p>
-            <p align="center"><a href="เมนูปู.html">เมนูปู</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผลไม้" /></p>
-            <p align="center"><a href="เมนูผลไม้.html">เมนูผลไม้</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูใส้กรอก" /></p>
-            <p align="center"><a href="เมนูใส้กรอก.html">เมนูใส้กรอก</a></p></th>
+            <p align="center"><a href="เมนูชีส.html">ชีส</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปลา" /></p>
-            <p align="center"><a href="ปลา.html">เมนูปลา</a></p></th>
+            <p align="center"><a href="ปลา.html">ปลา</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปลาหมึก" /></p>
+            <p align="center"><a href="เมนูปลาหมึก.html">ปลาหมึก</a></p></th> 
           </tr>
           <tr>   
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่เค็ม" /></p>
-            <p align="center"><a href="เมนูไข่เค็ม.html">เมนูไข่เค็ม</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่" /></p>
-            <p align="center"><a href="เมนูไข่.html">เมนูไข่</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไก่" /></p>
-            <p align="center"><a href="เมนูไก่.html">เมนูไก่</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูแซลมอน" /></p>
-            <p align="center"><a href="เมนูแซลมอน.html">เมนูแซลมอน</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเห็ด" /></p>
-            <p align="center"><a href="เมนูเห็ด.html">เมนูเห็ด</a></p></th>
-          </tr>
-          <tr>   
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเส้น" /></p>
-            <p align="center"><a href="เมนูเส้น.html">เมนูเส้น</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเป็ด" /></p>
-            <p align="center"><a href="เมนูเป็ด.html">เมนูเป็ด</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเนื้อวัว" /></p>
-            <p align="center"><a href="เนื้อวัว.html">เมนูเนื้อวัว</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt=หม้ออบลมร้อน /></p>
-            <p align="center"><a href="หม้ออบลมร้อน.html">หม้ออบลมร้อน</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผัก" /></p>
-            <p align="center"><a href="เมนูผัก.html">เมนูผัก</a></p></th>
-          </tr>
-          <tr>   
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปู" /></p>
+            <p align="center"><a href="เมนูปู.html">ปู</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผลไม้" /></p>
+            <p align="center"><a href="เมนูผลไม้.html">ผลไม้</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="หมูสามชั้น " /></p>
             <p align="center"><a href="หมูสามชั้น.html">หมูสามชั้น </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหมู" /></p>
-            <p align="center"><a href="เมนูหมู.html">เมนูหมู</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ทะเล" /></p>
-            <p align="center"><a href="ทะเล.html">ทะเล</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="หม้อทอดไร้น้ำมัน" /></p>
-            <p align="center"><a href="หม้อทอดไร้น้ำมัน.html">หม้อทอดไร้น้ำมัน</a></p></th>
-            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="หม้อหุงข้าว" /></p>
-            <p align="center"><a href="หม้อหุงข้าว.html">หม้อหุงข้าว</a></p></th>
+            <p align="center"><a href="เมนูหมู.html">หมู</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหอย" /></p>
+            <p align="center"><a href="เมนูหอย.html">หอย</a></th>
           </tr>
-          <tr>
+          <tr>  
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt=อกไก่/></p>
+            <p align="center"><a href="อกไก่.html">อกไก่</a></p></th> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเต้าหู้" /></p>
-            <p align="center"><a href="เมนูเต้าหู้.html">เมนูเต้าหู้ </a></p></th>
-            
+            <p align="center"><a href="เมนูเต้าหู้.html">เต้าหู้ </a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเนื้อวัว" /></p>
+            <p align="center"><a href="เนื้อวัว.html">เนื้อวัว</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเป็ด" /></p>
+            <p align="center"><a href="เมนูเป็ด.html">เป็ด</a></p></th>  
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเส้น" /></p>
+            <p align="center"><a href="เมนูเส้น.html">เส้น</a></p></th>
           </tr>
-      </table>
+          <tr>  
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเห็ด" /></p>
+            <p align="center"><a href="เมนูเห็ด.html">เห็ด</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูแซลมอน" /></p>
+            <p align="center"><a href="เมนูแซลมอน.html">แซลมอน</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไก่" /></p>
+            <p align="center"><a href="เมนูไก่.html">ไก่</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่" /></p>
+            <p align="center"><a href="เมนูไข่.html">ไข่</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่เค็ม" /></p>
+            <p align="center"><a href="เมนูไข่เค็ม.html">ไข่เค็ม</a></p></th>
+          </tr>
+          <tr> 
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูใส้กรอก" /></p>
+            <p align="center"><a href="เมนูใส้กรอก.html">ใส้กรอก</a></p></th>  
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผัก" /></p>
+            <p align="center"><a href="เมนูผัก.html">ผัก</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
+            <p align="center"><a href="อื่นๆวัตถุดิบ.html"> อื่นๆ </a></p></th>
+          </tr>
+      </table>  
 
-          <h4><font color="#696969"><B><U>เบเกอรี่ และเครื่องดื่ม</U></B></h4></FONT>
+          <!-- <h4><font color="#696969"><B><U>เบเกอรี่ และเครื่องดื่ม</U></B></h4></FONT>
           <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
           <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เค้ก" /></p>
@@ -274,29 +268,29 @@
           <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
          <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูต้ม" /></p>
-            <p align="center"><a href="เมนูต้ม.html">เมนูต้ม</a></p></th>
+            <p align="center"><a href="เมนูต้ม.html">ต้ม</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูทอด" /></p>
-            <p align="center"><a href="เมนูทอด.html">เมนูทอด</a></p></th>
+            <p align="center"><a href="เมนูทอด.html">ทอด</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูนึ่ง" /></p>
-            <p align="center"><a href="เมนูนึ่ง.html">เมนูนึ่ง</a></p></th>
+            <p align="center"><a href="เมนูนึ่ง.html">นึ่ง</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผัด" /></p>
-            <p align="center"><a href="เมนูผัด.html">เมนูผัด</a></p></th>
+            <p align="center"><a href="เมนูผัด.html">ผัด</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูยำ" /></p>
-            <p align="center"><a href="เมนูยำ.html">เมนูยำ</a></p></th>
+            <p align="center"><a href="เมนูยำ.html">ยำ</a></p></th>
         </tr>
         <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูย่าง" /></p>
-            <p align="center"><a href="เมนูย่าง.html">เมนูย่าง</a></p></th>
+            <p align="center"><a href="เมนูย่าง.html">ย่าง</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหม้อหุงข้าว" /></p>
-            <p align="center"><a href="เมนูหม้อหุงข้าว.html">เมนูหม้อหุงข้าว</a></p></th>
+            <p align="center"><a href="เมนูหม้อหุงข้าว.html">หม้อหุงข้าว</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหม้ออบลมร้อน" /></p>
-            <p align="center"><a href="เมนูหม้ออบลมร้อน.html">เมนูหม้ออบลมร้อน</a></p></th>
+            <p align="center"><a href="เมนูหม้ออบลมร้อน.html">หม้ออบลมร้อน</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอบ" /></p>
             <p align="center"><a href="เมนูอบ.html">เมนูอบ</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไมโครเวฟ" /></p>
-            <p align="center"><a href="เมนูไมโครเวฟ.html">เมนูไมโครเวฟ</a></p></th>
+            <p align="center"><a href="เมนูไมโครเวฟ.html">ไมโครเวฟ</a></p></th>
         </tr>
-      </table>
+      </table> -->
 
         <h4><font color="#696969"><B><U>วันเทศกาล/วันสำคัญ</U></B></h4></FONT>
         <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
@@ -319,7 +313,10 @@
             <p align="center"><a href="ฮัลโลวีน.html"> ฮัลโลวีน</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ปาร์ตี้" /></p>
             <p align="center"><a href="ปาร์ตี้.html"> ปาร์ตี้</a></p></th>
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
+            <p align="center"><a href="อื่นๆของวัน.html"> อื่นๆ </a></p></th>
           </tr>
+        
       </table>
   
          <h4><font color="#696969"><B><U>นานาชาติ</U></B></h4></FONT>
@@ -348,9 +345,13 @@
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเกาหลี" /></p>
             <p align="center"><a href="อาหารเกาหลี.html">อาหารเกาหลี</a></p></th>
           </tr>
+          <tr>   
+            <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
+            <p align="center"><a href="อื่นๆนานาชาติ.html">อื่นๆ</a></p></th>
+          </tr>
           </table>
 
-        <h4><font color="#696969"><B><U>สุขภาพ/ลดน้ำหนัก</U></B></h4></FONT>
+        <!-- <h4><font color="#696969"><B><U>สุขภาพ/ลดน้ำหนัก</U></B></h4></FONT>
          <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
          <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="คลีน" /></p>
@@ -364,12 +365,12 @@
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="โปรตีน" /></p>
             <p align="center"><a href="โปรตีน.html">โปรตีน</a></p></th> 
         </tr>
-      </table>
+      </table> -->
 
 
 
 
-      <h4><font color="#696969"><B><U>อาหารท้องถิ่น</U></B></h4></FONT>
+      <h4><font color="#696969"><B><U>ภูมิภาคอาหาร</U></B></h4></FONT>
          <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
          <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารอีสาน" /></p>

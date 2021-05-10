@@ -1,4 +1,3 @@
-  
 <html>
   <head>
   <meta charset="utf-8">
@@ -12,23 +11,32 @@ $password = "";
 $databasename = "project2";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $databasename );
-mysqli_query($conn, "SET NAMES 'utf8' ");
+$con = new mysqli($servername, $username, $password, $databasename );
+mysqli_query($con, "SET NAMES 'utf8' ");
 
 if(count($_POST)>0) {                                  	
-mysqli_query($conn,"UPDATE users set id= '" . $_POST['id'] . "', email= '" . $_POST['email'] . "', username = '" . $_POST['username'] . "',
-	password = '" . $_POST['password'] . "' WHERE id  ='". $_POST['id'] . "'");
+  mysqli_query($con,"UPDATE users set email = '" . $_POST['email'] . "', username = '" . $_POST['username'] . "',
+  password = '" . $_POST['password'] . "' WHERE email ='". $_POST['email'] . "'");
 
-echo "<script type='text/javascript'>";
+
+echo "<script type='text/javascript','varchar(30)/javascript'>";
 echo "alert('บันทึกข้อมูลเรียบร้อย !');";
 echo "window.location= 'member.php';";
 echo "</script>";
+
 }
 
-$result = mysqli_query($conn,"SELECT * FROM users WHERE id ='" . $_GET['id'] . "'");
+$result = mysqli_query($con,"SELECT * FROM users WHERE id ='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
 
+
+<!DOCTYPE html>
+<html lang="en-Us">    
+  <head>
+    <title>สมาชิก</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 <html>
     <style>
     from{
@@ -55,30 +63,24 @@ $row= mysqli_fetch_array($result);
     <div class="form-group" >
     <div class="col-sm-2" align="left"> E-mail : </div>
     <div class="col-sm-5" align="left">
-    <input type="varchar(100)"name="email" class="form-control" value="<?php echo $row['email']; ?>">
+    <input name="email" type="varchar(100)" required class="form-control" value="<?php echo $row['email']; ?>">
     </div> 
-    </div>     
-    
-    
-    <div class="form-group">Username: </div>
+    </div>   
+
+    <div class="form-group">
+    <div class="col-sm-2" align="left">Username : </div>
     <div class="col-sm-5" align="left">
     <input  name="username" type="varchar(100)" required class="form-control" value="<?php echo $row['username']; ?> ">
     </div>
     </div>
 
-    <div class="form-group">Password : </div>
+    <div class="form-group">Password: </div>
     <div class="col-sm-5" align="left">
     <input  name="password" type="varchar(100)" required class="form-control" value="<?php echo $row['password']; ?> ">
     </div>
     </div>
-          
-    
-    <!-- <div class="form-group">Profile</div>
-   <form action="upload.php" method="post" enctype="multipart/form-data" >
-    <input type="file" name="file">
-    <input type="submit" value="upload" name="submit">              
-    </form>  -->
-
+     
+  
         
     <div class="form-group">
     <div class="col-sm-2"> </div>

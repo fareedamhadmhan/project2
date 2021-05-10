@@ -73,7 +73,7 @@
   <form action="" method="get">
       <label>ค้นหาเมนูอาหาร</label>
       <div class="input-group" class="text-dark" bgcolor="#FF3366">
-        <input type="text"  SIZE="45" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,นานาชาติ,สุขภาพ/ลดน้ำหนัก,เบเกอรี่ และเครื่องดื่ม" name="search1">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,นานาชาติ,สุขภาพ/ลดน้ำหนัก,เบเกอรี่ และเครื่องดื่ม" name="search1">
         <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
     </form>
     </div>
@@ -83,19 +83,21 @@
     <U><h2 align="center">ตารางข้อมูลสมาชิก</h2></U>
     <div class="container" class="col-md-7">
     <br> 
-    <table id="example" class="table table-dark table-striped" border="4" style="width:100%" >
+    <table  class="table table-striped" border="2" style="width:100%" >
     
             <thead>  
                 <tr align='center'>
+                <td><B>Profile</B></td>
                 <td><B>Email</B></td>
                 <td><B>Username</B></td>
                 <td><B>Password</B></td>
-                <!-- <td><B>Profile</B></td>  -->
                 <td><B>Edit</B></td>
                 <td><B>delete</B></td>
                 <td><B>Addimage</B></td>
                 </tr>
             </thead> 
+
+            
             <?php
                   include "connect.php";
                   $sql = "SELECT * FROM `users` ";
@@ -104,19 +106,21 @@
                   $sql = "SELECT * FROM `users` WHERE id ='$id'";
                 }
                   $result = $con->query($sql);
+               
               ?>
               
               <?php
                     while($row = $result->fetch_assoc()){
+                      $path="fileupload/";  
+       
                 ?>
-              
 
                 <tr>
-                    
+                    <td align='center'><?php echo "<img src='uploads/fileupload/$path  width= '50' height ='50'>"; ?></td> 
                     <td align='center'><?php echo $row['email']; ?></td>
                     <td align='center'><?php echo $row['username']; ?></td>
                     <td align='center'><?php echo $row['password']; ?></td>
-                    <!-- <td ><?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'"alt="image" style="width:100% height=100%;" >'; ?></td> -->
+                    <!-- <td align='center'><?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'"alt="image" style="width:100% height=100%;" >'; ?></td>  -->
                     <td align='center'> <button class="btn-warning btn"> <a href="updatemember.php?id=<?php echo $row['id']; ?>" class="text-white"> แก้ไข </a> </button> </td>
                     <td align='center'> <button class="btn-danger btn"> <a href="ลบข้อมูลสมาชิก.php?id=<?php echo $row['id']; ?>" class="text-white"> ลบ </a> </button> </td>
                     <td align='center'> <button class="btn btn-outline-primary"> <a href="http://localhost/project2/uploads/?id=<?php echo $row['id']; ?>" class="text-white">เพิ่มรูปโปรไฟล์</a> </button> </td>

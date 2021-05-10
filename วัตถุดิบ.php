@@ -61,15 +61,15 @@
      <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>       
      </ul><br>
      
-     <form action="" method="get">
+     </ul><br>
+      <form action="" method="get">
       <label>ค้นหาเมนูอาหาร</label>
       <div class="input-group" class="text-dark" bgcolor="#FF3366">
-        <input type="text"  SIZE="42" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,นานาชาติ,สุขภาพ/ลดน้ำหนัก,เบเกอรี่ และเครื่องดื่ม" name="search1">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
         <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
     </form>
     </div>
     </div>
-    
 
       <?php
     if (isset($_REQUEST['search']) && $_REQUEST['search'] == "ค้นหา"){
@@ -103,8 +103,8 @@
  
 </head>
 <body>
-<h3 align="center"><font color=green>🧀วัตถุดิบ <button class="btn btn-success"><a href="insertวัตถุดิบ.php" class="text-white"> เพิ่ม </a> </button></font></h3>
-    
+<!-- <h3 align="center"><font color=green>🧀วัตถุดิบ <button class="btn btn-success"><a href="insertวัตถุดิบ.php" class="text-white"> เพิ่ม </a> </button></font></h3>  -->
+<h3 align="center"><font color=green>🧀วัตถุดิบ </font></h3>
 <meta charset="UTF-8">
 <?php
 //1. เชื่อมต่อ database: 
@@ -115,48 +115,67 @@ $query = "SELECT * FROM  material ORDER BY material_name asc" or die("Error:" . 
 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
 //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
-echo "<table style='border: 2px solid red;' table border=1 align='center' width='300' cellspacing=0 cellpading=0>";
+echo "<table style='border: 0px ' table border=1 align='center' width='300' cellspacing=0 cellpading=0>";
 // //หัวข้อตาราง
 // echo "<tr align='center' bgcolor='#CCCCCC'><td>วัตถุดิบ</td><td>Uername</td><td>ชื่อ</td><td>นามสกุล</td><td>อีเมล์</td><td>แก้ไข</td><td>ลบ</td></tr>";
 while($row = mysqli_fetch_array($result)) { 
+  $mn = $row["material_name"];
   echo "<tr>";
-  echo "<td>" .$row["material_name"] .  "</td> "; 
+  echo "<td>" .$mn ."</td> "; 
+  echo "<td>&nbsp;&nbsp;&nbsp;<a href='$mn.html'>Select</a></td>";
+  // echo "<td>" .$row["material_name"] .  "</td> "; 
 }
 echo "</table>";
 //5. close connection
 mysqli_close($con);
 ?>
 <body>
-<br>
-    <div class="col-lg-9">
+
+    <!-- <div class="col-lg-9">
     <div class="container" class="col-md-8">
      <form method="post">           
       <table>
-        <h4><font color="blue"><B>🧀 ดูรายการวัตุดิบ</B></h4></FONT>
-          <p><font color="blue"><a href="ขนมปังปิง.html">ขนมปังปิง</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูอะโวคาโด.html">เมนูอะโวคาโด</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูกุ้ง.html">เมนูกุ้ง</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูชีส.html">เมนูชีส</p></th></FONT> 
-          <p><font color="blue"><a href="ปลา.html">เมนูปลา</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูปลาหมึก.html">เมนูปลาหมึก</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูปู.html">เมนูปู</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูผลไม้.html">เมนูผลไม้</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูผัก.html">เมนูผัก</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูสามชั้น.html">เมนูสามชั้น</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูหมู.html">เมนูหมู</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูหอย.html">เมนูหอย</p></th></FONT>
-          <p><font color="blue"><a href="เมนูอกไก่.html">เมนูอกไก่</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูอาหารทะเล.html">เมนูอาหารทะเล</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูเต้าหู้.html">เมนูเต้าหู้</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูเนื้อวัว.html">เมนูเนื้อวัว</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูเป็ด.html">เมนูเป็ด</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูเส้น.html">เมนูเส้น</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูเห็ด.html">เมนูเห็ด</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูแซลมอน.html">เมนูแซลมอน</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูไก่.html">เมนูไก่</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูไข่.html">เมนูไข่</p></th></FONT> 
-          <p><font color="blue"><a href="เมนูไข่เค็ม.html">เมนูไข่เค็ม</p></th></FONT>    
-       </table>
+        <h4 ><font color="blue"><B>🧀 ดูรายการวัตุดิบ</B></h4></FONT>
+        <tr>
+            <p><font color="blue"><a href="ขนมปังปิง.html">ขนมปังปิง</p></th></FONT>  -->
+            <!-- <p><font color="blue"><a href="เมนูอะโวคาโด.html">เมนูอะโวคาโด</p></th></FONT>  -->
+            <!-- <p><font color="blue"><a href="เมนูกุ้ง.html">กุ้ง</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูชีส.html">ชีส</p></th></FONT> 
+            <p><font color="blue"><a href="ปลา.html">ปลา</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูปลาหมึก.html">ปลาหมึก</p></th></FONT> 
+          </tr>
+          <tr>
+            <p><font color="blue"><a href="เมนูปู.html">ปู</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูผลไม้.html">ผลไม้</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูผัก.html">ผัก</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูสามชั้น.html">สามชั้น</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูหมู.html">หมู</p></th></FONT> 
+          </tr>
+          <tr>  
+            <p><font color="blue"><a href="เมนูหอย.html">หอย</p></th></FONT>
+            <p><font color="blue"><a href="เมนูอกไก่.html">อกไก่</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูอาหารทะเล.html">อาหารทะเล</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูเต้าหู้.html">เต้าหู้</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูเนื้อวัว.html">เนื้อวัว</p></th></FONT>
+          </tr>
+          <tr>
+            <p><font color="blue"><a href="เมนูเป็ด.html">เป็ด</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูเส้น.html">เส้น</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูเห็ด.html">เห็ด</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูแซลมอน.html">แซลมอน</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูไก่.html">ไก่</p></th></FONT> 
+          </tr>
+          <tr>    
+            <p><font color="blue"><a href="เมนูไข่.html">ไข่</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูไข่เค็ม.html">ไข่เค็ม</p></th></FONT>  
+            <p><font color="blue"><a href="เมนูไข่.html">.ใส้กรอก</p></th></FONT> 
+            <p><font color="blue"><a href="เมนูไข่เค็ม.html">ผัก</p></th></FONT>
+          </tr>    
+          <tr><td><br></td></tr>
+       </table> -->
+
+
+       
           <!--  <table>
             <table align="center"  width="230" height="160" cellspacing= "0" cellspacing="0">  
             <br><h3 align="center"> <font color="blue"><B>เมนูอาหาร ตามวัตถุดิบ</B></h3></FONT>
@@ -568,10 +587,11 @@ mysqli_close($con);
 
              
                 <br>
-                <tr>
-                <td><button type="button" class="btn btn-outline-info"> <a href="ประเภทอาหาร.php" class="text-white"> ย้อนกลับ </a> </button> </td>
-                <td><button class="btn btn-info"> <a href="index.php" class="text-white">หน้าหลัก</a> </button> </td>
-                <td><button type="button" class="btn btn-outline-info"> <a href="วิธีการ.php" class="text-white"> ถัดไป </a> </button> </td>
+                <table align='center' >
+                <tr >
+                  <td><button type="button" class="btn btn-outline-info"> <a href="ประเภทอาหาร.php" class="text-white"> ย้อนกลับ </a> </button> </td>
+                  <td><button class="btn btn-info"> <a href="index.php" class="text-white">หน้าหลัก</a> </button> </td>
+                  <td><button type="button" class="btn btn-outline-info"> <a href="วิธีการ.php" class="text-white"> ถัดไป </a> </button> </td>
                 </tr>
             
             </table>

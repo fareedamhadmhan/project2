@@ -58,22 +58,20 @@
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
      <li><a href="index.php" class="text-white">หน้าหลัก</a></li>
-  
-  </ul><br>
-      <div class="input-group" class="text-dark">
-        <form action="" method="GET">
-  
-        <label>ค้นหาสมาชิก</label>
-        <input type="text" placeholder="กรุณากรอกรหัสผ่าน" name="search">
-        <input type="submit" value="Search" name="btn" class="btn btn-sm btn-primary" >
-      </form>
-      </div>
-      </div>
+     </ul><br>
+      <form action="" method="get">
+      <label>ค้นหาเมนูอาหาร</label>
+      <div class="input-group" class="text-dark" bgcolor="#FF3366">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
+        <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
+    </form>
+    </div>
+    </div>
 
 <meta charset= "utf-8">
 <title>INSERT</title>
 <?php
-        include 'connection.php';
+        include 'connect.php';
        
         if(isset($_POST['save'])){
             

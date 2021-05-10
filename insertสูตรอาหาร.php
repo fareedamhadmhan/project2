@@ -1,7 +1,7 @@
 <meta charset= "utf-8">
 <title>INSERT</title>
 <?php
-        include 'connection.php';
+        include 'connect.php';
        
         if(isset($_POST['save'])){
             

@@ -1,14 +1,13 @@
 <?php
-    include "connection.php";
+    include "connect.php";
  
-    $sql = "SELECT * FROM ตารางสูตรอาหาร";
+    $sql = "SELECT * FROM menu";
     if( isset($_GET['search']) ){
     $manu_name = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-    $sql = "SELECT * FROM ตารางสูตรอาหาร WHERE manu_name ='$manu_name' ";
+    $sql = "SELECT * FROM menu WHERE menu_id ='$manu_id' ";
    }
     
  ?>
-
 
 
 <!DOCTYPE html>
@@ -106,39 +105,40 @@ table, th, td {
         <table border="2" id="example" class="table-bordered table table-dark" cellpadding="5",cellspacing="5">
             <thead>
                 <tr align='center'><div class="col*lg-12">
+                    <td bgcolor="pink"><B>ลำดับ</td>
                     <td bgcolor="pink"><B>ชื่อเมนูอาหาร</td>
+                    <td bgcolor="pink"><B>คำอธิบาย</td>
                     <td bgcolor="pink"><B>ส่วนผสม </td>
                     <td bgcolor="pink"><B>วิธีทำ</td>
-                    <td bgcolor="pink"><B>รูป</td> 
-                    <td bgcolor="pink"><B>แก้ไข</td>
-                    <td bgcolor="pink"><B>ลบ</td>    
+                    <!-- <td bgcolor="pink"><B>รูป</td>  -->
+                    <!-- <td bgcolor="pink"><B>แก้ไข</td>
+                    <td bgcolor="pink"><B>ลบ</td>     -->
                 </tr>
             </thead>
            
 
             <?php
-                 include "connection.php";
-                 $sql = "SELECT * FROM ตารางสูตรอาหาร";
+                 include "connect.php";
+                 $sql = "SELECT * FROM menu";
                   if( isset($_GET['search']) ){
                     $manu_name = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-                    $sql = "SELECT * FROM ตารางสูตรอาหาร WHERE manu_name ='$manu_name' ";
+                    $sql = "SELECT * FROM menu WHERE menu_id ='$manu_id' ";
                     }
                         $result = $con->query($sql);
                  ?>
                 
-                <?php
+                 <?php
                     while($row = $result->fetch_assoc()){
-                ?>
-
-
-                
+                ?>   
                 <tr>
-                    <td align='center' bgcolor="FFF0F5"><?php echo $row['manu_name']; ?></td>
-                    <td align='center'><?php echo $row['Ingredients']; ?></td>
-                    <td align='center'bgcolor="FFF0F0"><?php echo $row['Gastronomy']; ?></td>
-                    <td ><?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'"alt="image" style="width:50% height=50%;" >'; ?></td>
-                    <td align='center'> <button class="btn-warning btn"> <a href="updateสูตร.php?manu_name=<?php echo $row['manu_name']; ?>" class="text-white"> แก้ไข </a> </button> </td>
-                    <td align='center'> <button class="btn-danger btn"> <a href="deleteสูตรอาหาร.php?manu_name=<?php echo $row['manu_name']; ?>" class="text-white"> ลบ </a> </button> </td>
+                    <td align='center' bgcolor="FFF0F5"><?php echo $row['menu_id']; ?></td>
+                    <td align='center' bgcolor="FFF0F5"><?php echo $row['menu_name']; ?></td>
+                    <td align='center' bgcolor="FFF0F5"><?php echo $row['explain']; ?></td>
+                    <td align='center'bgcolor="FFF0F0"><?php echo $row['Ingredients']; ?></td>
+                    <td align='center' bgcolor="FFF0F5"><?php echo $row['cook']; ?></td>
+                    <!-- <td ><?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'"alt="image" style="width:50% height=50%;" >'; ?></td> -->
+                    <!-- <td align='center'> <button class="btn-warning btn"> <a href="updateสูตร.php?manu_name=<?php echo $row['manu_name']; ?>" class="text-white"> แก้ไข </a> </button> </td>
+                    <td align='center'> <button class="btn-danger btn"> <a href="deleteสูตรอาหาร.php?manu_name=<?php echo $row['manu_name']; ?>" class="text-white"> ลบ </a> </button> </td> -->
                 </tr>
             <?php
             }
@@ -156,7 +156,7 @@ table, th, td {
 </body>
 </html>
 
-<script>
+<!-- <script>
   $(document).ready(function(){
     $('#insert').click(function(){
       var image_name =$('#images').val();
@@ -173,4 +173,4 @@ table, th, td {
     }
   });
 });
-</script>
+</script> -->

@@ -60,22 +60,25 @@
      <li  class="active"><a href="ผู้ดูแลระบบ.php" class="text-white"><U>จัดการข้อมูลผู้ดูแลระบบ</U></a></li>
      <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
      </ul><br>
-     <form action="" method="get">
+    
+     </ul><br>
+      <form action="" method="get">
       <label>ค้นหาเมนูอาหาร</label>
       <div class="input-group" class="text-dark" bgcolor="#FF3366">
-        <input type="text"  SIZE="42" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,นานาชาติ,สุขภาพ/ลดน้ำหนัก,เบเกอรี่ และเครื่องดื่ม" name="search1">
+        <input type="text"  SIZE="35" placeholder="ค้นหาจากชื่อเมนู,วัตถุดิบ,ประเภทอาหาร,วันเทศกาล/วันสำคัญ,นานาชาติ,ภูมิภาคอาหาร" name="search1">
         <button name="search" value="ค้นหา" class="btn btn-sm btn-primary">ค้นหา</button>
     </form>
     </div>
     </div>
-        
+    
       <br>
       <div class="col-lg-9">
-      <h1 align="center">จัดการข้อมูลผู้ดูแลระบบ<button class="btn btn-success"> <a href="insertผู้ดูแลระบบ.php" class="text-white"> เพิ่ม </a> </button> </h1>  
+      <!-- <h1 align="center">จัดการข้อมูลผู้ดูแลระบบ<button class="btn btn-success"> <a href="insertผู้ดูแลระบบ.php" class="text-white"> เพิ่ม </a> </button> </h1>   -->
+      <h1 align="center">จัดการข้อมูลผู้ดูแลระบบ </h1>  
       <h2 align="center">ลงทะเบียนผู้ดูแลระบบ</h2>
       <div class="container"class ="col-lg-12">
       <br> 
-      <table id=system_admin class="table table-dark table-striped" border="4" style="width:100%" >
+      <table id=system_admin class="table table-dark table-striped" border="2" style="width:100%" >
          <thead>
             <tr align="center">
             <td><B>Email</B></td>
