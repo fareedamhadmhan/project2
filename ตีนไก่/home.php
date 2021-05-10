@@ -18,7 +18,7 @@
                 <th scope="row"><p><img src="https://img-global.cpcdn.com/recipes/64dc955d8a708d78/751x532cq70/%E0%B8%A3%E0%B8%B9%E0%B8%9B-%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%82%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3-%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B5%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%81%E0%B8%8B%E0%B9%88%E0%B8%9A.webp" width="230" height="160" alt=" " /></p>
                 <p align="center"><a href="ซุปเปอร์ตีนไก่สุดแซ่บ.html">ซุปเปอร์ตีนไก่สุดแซ่บ </p></th>
                
-            <tr>   
+          
                     
 
             </tr>
