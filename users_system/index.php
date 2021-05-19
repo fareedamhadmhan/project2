@@ -7,23 +7,19 @@
 <body>
 <?php
 //1. เชื่อมต่อ database: 
-include('connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include('../connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 //2. query ข้อมูลจากตาราง: 
-$query = "SELECT * FROM uploadfile ORDER BY fileID asc" or die("Error:" . mysqli_error($con)); 
-//3. execute the query. 
+$query = "SELECT * FROM users_file" or die("Error:" . mysqli_error($con)); 
+//3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
-//4 . แสดงข้อมูลที่ query ออกมา: 
-
-//ใช้ตารางในการจัดข้อมูล
+//4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
 echo "<table border='1' align='center' width='500'>";
 //หัวข้อตาราง
-echo "<tr align='center' bgcolor='#CCCCCC'><td>File ID</td><td>File</td><td>date_create</td></tr>";
+echo "<tr align='center' bgcolor='#CCCCCC'><td>filename</td><td> img </td></tr>";
 while($row = mysqli_fetch_array($result)) { 
   echo "<tr>";
-  echo "<td align='center'>" .$row["fileID"] .  "</td> "; 
-  //echo "<td><a href='.$row['fileupload']'>showfile</a></td> ";
-  echo "<td>"  .@$row["path_file"] . "</td> ";  
-  echo "<td align='center'>" .$row["dateup"] .  "</td> ";
+  echo "<td>" .$row["path_file"] .  "</td> ";
+  echo "<td>"."<img src='path_file".$row['path_file']."' width='50' height ='50'>"."</td>";
   echo "</tr>";
 }
 echo "</table>";
@@ -44,7 +40,7 @@ mysqli_close($con);
     <tr>
       <td align="center" bgcolor="#EDEDED">File Browser</td>
       <td bgcolor="#EDEDED"><label>
-        <input type="file" name="fileupload" id="fileupload"  required="required"/>
+        <input type="file" name="path_file" id="path_file"  required="required"/>
       </label></td>
     </tr>
     <tr>
@@ -60,7 +56,6 @@ mysqli_close($con);
       <td bgcolor="#EDEDED">&nbsp;</td>
     </tr>
   </table>
-  <p>&nbsp;</p>
 </form>
 </body>
 </html>

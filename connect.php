@@ -8,7 +8,7 @@ $con = mysqli_connect($servername, $username, $password,$databasename)or die("Er
 mysqli_query($con, "SET NAMES 'utf8' ");
 
 if($con){
-  
+
 }else {
     echo 'Failed to Connect';
 }
