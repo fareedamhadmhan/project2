@@ -152,7 +152,7 @@
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูสเต็ก" /></p> 
           <p  align="center"><a href="เมนูสเต็ก.html">สเต็ก</p></th> 
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูอาหารจานเดียว" /></p> 
-          <p align="center"><a href="อาหารจานเดียว.html">อาหารจานเดียว</p></th>
+          <p align="center"><a href="อาหารจานเดียว.php">อาหารจานเดียว</p></th>
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเช้า" /></p> 
           <p align="center"><a href="อาหารเช้า.html">อาหารเช้า</p></th>
           <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เบเกอร์รี่" /></p> 

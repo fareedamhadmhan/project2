@@ -170,7 +170,7 @@ include '../connect.php';
             <td align="center"><label>ส่วนผสม / อุปกรณ์</label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="Ingredients" name="Ingredients" rows="2" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea></td>
+            <td align="center"><textarea id="Ingredients" name="Ingredients" rows="3" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea></td>
           </tr>
           <tr>
             <td><br></td>
@@ -179,7 +179,7 @@ include '../connect.php';
             <td align="center"><label>วิธีทำ</label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="cook" name="cook" rows="2" cols="100" placeholder="กรอกวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea></td>
+            <td align="center"><textarea id="cook" name="cook" rows="3" cols="100" placeholder="กรอกวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea></td>
           </tr>
           <tr>
             <td><br></td>

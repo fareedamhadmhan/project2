@@ -78,8 +78,10 @@
 
       <?php
       include "connect.php";
+
       
       $sql = "SELECT * FROM menu INNER JOIN attach_file ON menu.menu_name = attach_file.menu_name";
+      
       $result = $con->query($sql);
       foreach($result as $row){
         $path = $row["path_file"];
@@ -94,7 +96,7 @@
       
         <tr>
          <td>  
-            <img src='register_system/<?=$path;?>' width="250" height="180"><br>
+            <img src='register_system/<?=$path;?>' width="200" height="120"><br>
             <a href=""><?php echo $row["menu_name"];?><font color="#4169E1"></th></a></font>
          </td>
        </tr>
