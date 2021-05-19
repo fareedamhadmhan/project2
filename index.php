@@ -58,7 +58,7 @@
      <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
-     <li><a href="member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
+     <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
  
       
       <!-- </ul><br>

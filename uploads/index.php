@@ -18,8 +18,8 @@ echo "<table border='1' align='center' width='500'>";
 echo "<tr align='center' bgcolor='#CCCCCC'><td>filename</td><td> img </td></tr>";
 while($row = mysqli_fetch_array($result)) { 
   echo "<tr>";
-  echo "<td>" .$row["fileupload"] .  "</td> ";
-  echo "<td>"."<img src='fileupload/".$row['fileupload']."' width='100'>"."</td>";
+  echo "<td>" .$row["path_file"] .  "</td> ";
+  echo "<td>"."<img src='fileupload/".$row['path_file']."' width='100'>"."</td>";
   echo "</tr>";
 }
 echo "</table>";
