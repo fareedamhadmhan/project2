@@ -9,6 +9,7 @@ if (!empty($name_menu)) {
     $result     =   @$con->query($sql);
     $row        = $result->fetch_assoc();
     $row_nums   = $result->num_rows;
+    $menu_id    = @$row["menu_id"];
 
     $detail             = @$row["detail"];
     $people             = @$row["for_people"];
@@ -184,6 +185,7 @@ if (!empty($name_menu)) {
     if ($row_nums >= 1) {
         echo "<form id='data1' action='' method='post'>
         <input type='hidden' name='menu_name' value='" . $name_menu . "'>
+        <input type='hidden' name='menu_id' value='" . $menu_id . "'>
         <table>      
             <tr>
                 <td align='center'><label> อธิบายสั้น ๆ เกี่ยวกับเมนูนี้</label></td>
@@ -332,7 +334,7 @@ if (!empty($name_menu)) {
             </tr>
             </table>
         </form>
-        <button class='btn btn-warning' onclick='edit_menu_submit()'>แก้ไขข้อมูล</button>
+        <button class='btn btn-warning' onclick='delete_menu_submit()'>ลบสูตรอาหาร</button>
         ";
     } else {
         echo "ไม่มีข้อมูล";

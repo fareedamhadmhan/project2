@@ -111,10 +111,6 @@ include '../connect.php';
 
     <!-- กรอกข้อมูล -->
 
-    <?php
-    // echo $_POST["menu_name"];
-    ?>
-
     <h2 align="center">แก้ไขสูตรอาหาร</h2>
     <center>
       <form id="data" method="post" action="" enctype="multipart/form-data">
@@ -123,12 +119,6 @@ include '../connect.php';
           <tr>
             <td align="center">**กรุณากรอกชื่ออาหารของคุณให้ครบทุกตัวอักษร เพื่อการค้นหาที่ถูกต้อง</td>
           </tr>
-          <tr>
-            <td><br></td>
-          </tr>
-          <!-- <tr>
-            <td align="center"><input type="file" name="fileupload" id="fileupload"></td>
-          </tr> -->
           <tr>
             <td><br></td>
           </tr>
