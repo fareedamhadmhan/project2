@@ -40,6 +40,11 @@ if (!empty($name_menu)) {
     $confoodtype_18 = "";
     $confoodtype_19 = "";
     $confoodtype_20 = "";
+    $confoodtype_21 = "";
+    $confoodtype_22 = "";
+    $confoodtype_23 = "";
+    $confoodtype_24 = "";
+    $confoodtype_25 = "";
 
     if($food_type=="1"){
         $confoodtype_1 = "checked";
@@ -81,7 +86,18 @@ if (!empty($name_menu)) {
         $confoodtype_19="checked";
     }else if($food_type=="20"){
         $confoodtype_20="checked";
+    }else if($food_type=="21"){
+        $confoodtype_21="checked";
+    }else if($food_type=="22"){
+        $confoodtype_22="checked";
+    }else if($food_type=="23"){
+        $confoodtype_23="checked";
+    }else if($food_type=="24"){
+        $confoodtype_24="checked";
+    }else if($food_type=="25"){
+        $confoodtype_25="checked";
     }
+
 
     $confastival_1 ="";
     $confastival_2 ="";
@@ -123,6 +139,7 @@ if (!empty($name_menu)) {
     $coninternational_8 = "";
     $coninternational_9 = "";
     $coninternational_10 = "";
+    $coninternational_11 = "";
 
     if($international=="1"){
         $coninternational_1 = "checked";
@@ -144,7 +161,9 @@ if (!empty($name_menu)) {
         $coninternational_9="checked";
     }else if($international=="10"){
         $coninternational_10="checked";
-    }
+    }else if($international=="11"){
+    $coninternational_11="checked";
+    } 
 
     $conlocal_1 = "";
     $conlocal_2 = "";
@@ -188,7 +207,7 @@ if (!empty($name_menu)) {
                 <td align='center'><label>ส่วนผสม / อุปกรณ์</label></td>
             </tr>
             <tr>
-                <td align='center'><textarea id='Ingredients' name='Ingredients' rows='2' cols='100' placeholder='กรอกส่วนผสมของวัตถุดิบอาหารของคุณ' style='resize:none' input type='text' class='form-control'>" . $ingredients . "</textarea></td>
+                <td align='center'><textarea id='Ingredients' name='Ingredients' rows='5' cols='100' placeholder='กรอกส่วนผสมของวัตถุดิบอาหารของคุณ' style='resize:none' input type='text' class='form-control'>" . $ingredients . "</textarea></td>
             </tr>
             <tr>
                 <td><br></td>
@@ -197,7 +216,7 @@ if (!empty($name_menu)) {
                 <td align='center'><label>วิธีทำ</label></td>
             </tr>
             <tr>
-                <td align='center'><textarea id='cook' name='cook' rows='2' cols='100' placeholder='กรอกวิธีทำเมนูอาหารของคุณ' style='resize:none' input type='text' class='form-control'>" . $cook . "</textarea></td>
+                <td align='center'><textarea id='cook' name='cook' rows='5' cols='100' placeholder='กรอกวิธีทำเมนูอาหารของคุณ' style='resize:none' input type='text' class='form-control'>" . $cook . "</textarea></td>
             </tr>
             <tr>
                 <td><br></td>
@@ -243,6 +262,13 @@ if (!empty($name_menu)) {
                             <TD><INPUT TYPE=radio Name=food_type VALUE='20' $confoodtype_20> คลีน &nbsp;</TD>
                         </tr>
                         <tr>
+                             <TD><INPUT TYPE=radio Name=food_type VALUE='21' $confoodtype_21> ไร้แป้ง &nbsp;</TD>
+                             <TD><INPUT TYPE=radio Name=food_type VALUE='22' $confoodtype_22> ไขมันต่ำ &nbsp;</TD>
+                             <TD><INPUT TYPE=radio Name=food_type VALUE='23' $confoodtype_23> โปรตีน &nbsp;</TD>
+                             <TD><INPUT TYPE=radio Name=food_type VALUE='24' $confoodtype_24> เมนูฟิวชั่น &nbsp;</TD>
+                             <TD><INPUT TYPE=radio Name=food_type VALUE='25' $confoodtype_25> อื่นๆ &nbsp;</TD>
+                        </tr>
+                        <tr>
                             <td><br></td>
                         </tr>
                         <tr>
@@ -282,7 +308,8 @@ if (!empty($name_menu)) {
                             <TD><INPUT TYPE=radio Name=international VALUE='10' $coninternational_10> อาหารเกาหลี &nbsp;</TD>
                         </tr>
                         <tr>
-                            <TD><INPUT TYPE=radio Name=international VALUE='6'> อื่นๆ &nbsp;</TD>
+                            <TD><INPUT TYPE=radio Name=international VALUE='11' $coninternational_11> อื่นๆ &nbsp;</TD>
+                            
                         </tr>
 
                         <tr>

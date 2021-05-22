@@ -137,7 +137,7 @@
 
          <tr>  
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูแกง" /></p> 
-            <p align="center"><a href="เมนูแกง.html">แกง</p></th>
+            <p align="center"><a href="เมนูแกง.php">แกง</p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อาหารเด็ก " /></p> 
             <p align="center"><a href="อาหารเด็ก.html">อาหารเด็ก </p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูก๋วยเตี๋ยว" /></p> 
@@ -183,7 +183,7 @@
          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูฟิวชั่น" /></p>
          <p align="center"><a href="เมนูฟิวชั่น.html">ฟิวชั่น </a></p></th> 
          <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
-         <p align="center"><a href="อื่นๆประเภทอาหาร.html"> อื่นๆ </a></p></th>
+         <p align="center"><a href="อื่นๆประเภทอาหาร.php"> อื่นๆ </a></p></th>
         </tr>  
 
        </table>
@@ -314,7 +314,7 @@
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ปาร์ตี้" /></p>
             <p align="center"><a href="ปาร์ตี้.html"> ปาร์ตี้</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
-            <p align="center"><a href="อื่นๆของวัน.html"> อื่นๆ </a></p></th>
+            <p align="center"><a href="อื่นๆของวัน.php"> อื่นๆ </a></p></th>
           </tr>
         
       </table>
@@ -347,7 +347,7 @@
           </tr>
           <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
-            <p align="center"><a href="อื่นๆนานาชาติ.html">อื่นๆ</a></p></th>
+            <p align="center"><a href="อื่นๆนานาชาติ.php">อื่นๆ</a></p></th>
           </tr>
           </table>
 
