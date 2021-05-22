@@ -170,7 +170,7 @@ include '../connect.php';
             <td align="center"><label>ส่วนผสม / อุปกรณ์</label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="Ingredients" name="Ingredients" rows="3" cols="100" placeholder="กรอกส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea></td>
+            <td align="center"><textarea id="Ingredients" name="Ingredients" rows="5" cols="100" placeholder="เติมขั้นตอนส่วนผสมของวัตถุดิบอาหารของคุณ " style="resize:none" input type="text" class="form-control "></textarea></td>
           </tr>
           <tr>
             <td><br></td>
@@ -179,7 +179,7 @@ include '../connect.php';
             <td align="center"><label>วิธีทำ</label></td>
           </tr>
           <tr>
-            <td align="center"><textarea id="cook" name="cook" rows="3" cols="100" placeholder="กรอกวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea></td>
+            <td align="center"><textarea id="cook" name="cook" rows="5" cols="100" placeholder="เติมขั้นตอนวิธีทำเมนูอาหารของคุณ" style="resize:none" input type="text" class="form-control "></textarea></td>
           </tr>
           <tr>
             <td><br></td>
@@ -223,6 +223,13 @@ include '../connect.php';
                   <TD><INPUT TYPE=radio Name=food_type VALUE="18"> ของว่าง &nbsp;</TD>
                   <TD><INPUT TYPE=radio Name=food_type VALUE="19"> กับแกล้ม &nbsp;</TD>
                   <TD><INPUT TYPE=radio Name=food_type VALUE="20"> คลีน &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=food_type VALUE="21"> ไร้แป้ง &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=food_type VALUE="22"> ไขมันต่ำ &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=food_type VALUE="23"> โปรตีน &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=food_type VALUE="24"> เมนูฟิวชั่น &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=food_type VALUE="25"> อื่นๆ &nbsp;</TD>
                 </tr>
                 <tr>
                   <td><br></td>

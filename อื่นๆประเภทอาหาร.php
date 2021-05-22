@@ -1,5 +1,5 @@
 <head>
-    <title>อาหารจานเดียว</title></title>
+    <title>อื่นๆของประเภทอาหาร</title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -73,14 +73,14 @@
       <div class="container" class="col-md-8">
       <form method="post">
       <table border="2" >
-      <h3 align="center"> <font color="blue"><B>รวมสูตรเด็ด เมนูอาหารจานเดียว พร้อมวิธีทำง่ายๆ ใครๆ ก็ทำได้</B></h3></FONT> <br>
+      <h3 align="center"> <font color="blue"><B>รวมสูตรเด็ดประเภทอาหารเมนูอื่น ๆ พร้อมวิธีทำง่ายๆ ใครๆ ก็ทำได้</B></h3></FONT> <br>
     
 
       <?php
       include "connect.php";
 
       
-      $sql = "SELECT * FROM menu INNER JOIN attach_file ON menu.menu_name = attach_file.menu_name WHERE menu.active='1' and food_type='12' ";
+      $sql = "SELECT * FROM menu INNER JOIN attach_file ON menu.menu_name = attach_file.menu_name WHERE menu.active='1' and food_type='25' ";
       $result = $con->query($sql);
       $intRows = 0;
 
@@ -100,7 +100,7 @@
        foreach ($rowObject as $objResult) {
         echo "<td>
          <center>
-         <a href='".$objResult["menu_name"].".html'>&nbsp;<img width='230' height='170' src='register_system/". $objResult["path_file"] ."'></a><br />".$objResult["menu_name"]."<br><br>
+         <a href='".$objResult["menu_name"].".html'><img width='230' height='170' src='register_system/". $objResult["path_file"] ."'>&nbsp;</a><br />".$objResult["menu_name"]."</font><br><br>
          </center>
          </td>";
        }
