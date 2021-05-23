@@ -55,7 +55,7 @@
      <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
      <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <!-- <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li  class="active"><a href="ผู้ดูแลระบบ.php" class="text-white"><U>จัดการข้อมูลผู้ดูแลระบบ</U></a></li>
      <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>

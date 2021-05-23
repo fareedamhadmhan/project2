@@ -58,7 +58,7 @@ include '../connect.php';
      <li><a href="../register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="../ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
      <li><a href="../วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <!-- <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li class="active"><a href="member.php" class="text-white"><U>จัดการข้อมูลสมาชิก</U></a></li>
@@ -128,8 +128,8 @@ include '../connect.php';
                     <td align='center'><?php echo @$row['password']; ?></td>
                     <td align='center'><?php echo @$row['status']; ?></td>
                     
-                    <td align='center'> <button class="btn-warning btn"> <a href="updatemember.php?id=<?php echo @$row['id']; ?>" class="text-white"> แก้ไข </a> </button> </td>
-                    <td align='center'> <button class="btn-danger btn"> <a href="ลบข้อมูลสมาชิก.php?id=<?php echo @$row['id']; ?>" class="text-white"> ลบ </a> </button> </td>
+                    <td align='center'> <button class="btn-warning btn"> <a href="../updatemember.php?id=<?php echo @$row['id']; ?>" class="text-white"> แก้ไข </a> </button> </td>
+                    <td align='center'> <button class="btn-danger btn"> <a href="../ลบข้อมูลสมาชิก.php?id=<?php echo @$row['id']; ?>" class="text-white"> ลบ </a> </button> </td>
                     <td align='center'> <button class="btn btn-outline-primary"> <a href="../users_system/index.php?id=<?php echo @$row['id']; ?>" class="text-white">เพิ่มรูปโปรไฟล์</a> </button> </td>
                   </tr>
                 </tr> 

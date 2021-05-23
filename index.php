@@ -55,7 +55,7 @@
      <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
      <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <!-- <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
  
@@ -79,36 +79,57 @@
 <div class="col-md-7">
     <div class="container" class="col-md-8">
      <form method="post">    
-
-       <table>
         <h3 align="center"> <font color="blue"><B>เมนูอาหาร/สูตรอาหาร</B></h3></FONT>
         <h4><FONT SIZE="4"><font color="red"><B><Blink><img src="https://club.hihonor.com/global/global_data/images/2019/4/30/f65c8fe33351110e3b74fd0f131c80bb.gif"width="5%" height="10%" > เมนูใหม่/เมนูแนะนำรายสัปดาห์ </Blink></B></FONT></h4>
-        <table align="center"  width="180" height="130" cellspacing= "0" cellspacing="0">  
-            
-            <th scope="row"><p><img src="img/กุ้งราดซอสมะขาม.jpg" width="200" height="130" alt="กุ้งราดซอสมะขาม" /></p>
-            <p align="center"><a href="กุ้งราดซอสมะขาม1.html">กุ้งราดซอสมะขาม</a></FONT></p></th></FONT>
-            <th scope="row"><p><img src="img/น้ำพริกอ่อง.png" width="200" height="130" alt="น้ำพริกอ่อง" /></p>
-            <p align="center"><a href="น้ำพริกอ่อง.html">น้ำพริกอ่อง</p></th>
-            <th scope="row"><p><img src="img/ปูผัดผงกะหรี่.jpg" width="200" height="130" alt="ปูผัดผงกะหรี่" /></p>
-            <p align="center"><a href="ปูผัดผงกะหรี่.html">ปูผัดผงกะหรี่</p></th>
-            <th scope="row"><p><img src="img/ขนมปังหน้าหมูขอบฮอทดอกชีส.jpg" width="200" height="130" alt="ขนมปังหน้าหมูขอบฮอทดอกชีส" /></p>
-            <p align="center"><a href="ขนมปังหน้าหมูขอบฮอทดอกชีส.html">ขนมปังหน้าหมูขอบฮอทดอกชีส</p></th>
-            <tr>
-            <th scope="row"><p><img src="img/พะแนงเนื้อ.jpg" width="200" height="130" alt="พะแนงเนื้อ" /></p>
-            <p align="center"><a href="พะแนงเนื้อ.html">พะแนงเนื้อ</p></th>
-            <th scope="row"><p><img src="img/แกงมัสมั่นไก่.jpg" width="200" height="130" alt="แกงมัสมั่นไก่" /></p>
-            <p align="center"><a href="เมนูแกงมัสมั่นไก่.html">แกงมัสมั่นไก่</p></th>
-            <th scope="row"><p><img src="img/พล่ากุ้ง.jpg" width="200" height="130" alt="พล่ากุ้ง" /></p>
-            <p align="center"><a href="พล่ากุ้ง.html">พล่ากุ้ง</p></th>
-            <th scope="row"><p><img src="img/หมูตุ๋นยาจีน1.jpg" width="200" height="130" alt="หมูตุ๋นยาจีน" /></p>
-            <p align="center"><a href="หมูตุ๋นยาจีน1.html">หมูตุ๋นยาจีน</p></th>
-            </tr>
-            </table>
-
   
-         <h3> <font color="#000000"><B>หมวดอาหาร</B></h3></FONT>
-         <h4> <font color="#696969"><B><U>ประเภทอาหาร</U></B></h4></FONT>
-         <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">                 
+      <?php
+        include "connect.php";
+      ?>
+      <div class="col-lg-9">
+      <div class="container" class="col-md-8">
+        <?php
+        @$sql_menu_pic = "SELECT * FROM menu INNER JOIN attach_file ON menu.menu_name = attach_file.menu_name WHERE menu.active='1' ORDER BY menu_id DESC LIMIT 4 ";
+        @$result_pic = $con->query($sql_menu_pic);
+        $intRows = 0;
+
+        while(@$objResult = mysqli_fetch_array($result_pic))
+          {
+            $intRows++;
+            @$data[$intRows] = $objResult;
+          }
+
+        if($intRows > 0){
+          $columns = 4;
+          @$rows = array_chunk($data, $columns);
+        }
+        echo "<table border='0'>\n";
+        foreach (@$rows as $rowObject) {
+        echo "<tr>";
+        foreach ($rowObject as $objResult) {
+          echo "<td>
+          <center>
+          <a href='view_index/view_menu_content.php?name=".$objResult['menu_name']."'>&nbsp;<img width='230' height='170' src='register_system/".$objResult["path_file"]."'></a><br />".$objResult["menu_name"]."<br><br>
+          </center>
+          </td>";
+        }
+        if(@$cnum = count($rowObject)){
+            for($col=$cnum;$col<$columns;$col++){
+            echo '<td> </td>';
+            }
+        }
+        echo "</tr>";
+        }
+        echo "</table>";
+      ?>
+       </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br>
+
+          <h3> <font color="#000000"><B>หมวดอาหาร</B></h3></FONT>
+          <h4> <font color="#696969"><B><U>ประเภทอาหาร</U></B></h4></FONT>
+
+         <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
+                
          <tr> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูน้ำพริก" /></p>
             <p align="center"><a href="view_index/view_content.php?type=น้ำพริก">น้ำพริก</a></p></th>
@@ -175,65 +196,65 @@
 
        </table>
 
-          <h4><font color="#696969"><B><U>วัตถุดิบ</U></B></h4></FONT>
+           <h4><font color="#696969"><B><U>วัตถุดิบ</U></B></h4></FONT>
          <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
          <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="ขนมปังปิง" /></p>
-            <p align="center"><a href="ขนมปังปิง.html">ขนมปังปิ้ง</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ขนมปัง">ขนมปัง</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูกุ้ง" /></p>
-            <p align="center"><a href="เมนูกุ้ง.html">กุ้ง</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=กุ้ง">กุ้ง </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูชีส" /></p>
-            <p align="center"><a href="เมนูชีส.html">ชีส</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ชีส">ชีส </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปลา" /></p>
-            <p align="center"><a href="ปลา.html">ปลา</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ปลา">ปลา </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปลาหมึก" /></p>
-            <p align="center"><a href="เมนูปลาหมึก.html">ปลาหมึก</a></p></th> 
+            <p align="center"><a href="view_index/view_content_material.php?type=ปลาหมึก">ปลาหมึก </a></p></th> 
           </tr>
           <tr>   
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูปู" /></p>
-            <p align="center"><a href="เมนูปู.html">ปู</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ปู"> ปู</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผลไม้" /></p>
-            <p align="center"><a href="เมนูผลไม้.html">ผลไม้</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ผลไม้">ผลไม้</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="หมูสามชั้น " /></p>
-            <p align="center"><a href="หมูสามชั้น.html">หมูสามชั้น </a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=สามชั้น"> หมูสามชั้น </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหมู" /></p>
-            <p align="center"><a href="เมนูหมู.html">หมู</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=หมู"> หมู</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูหอย" /></p>
-            <p align="center"><a href="เมนูหอย.html">หอย</a></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=หอย"> หอย </a></th>
           </tr>
           <tr>  
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt=อกไก่/></p>
-            <p align="center"><a href="อกไก่.html">อกไก่</a></p></th> 
+            <p align="center"><a href="view_index/view_content_material.php?type=อกไก่">อกไก่</a></p></th> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเต้าหู้" /></p>
-            <p align="center"><a href="เมนูเต้าหู้.html">เต้าหู้ </a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=เต้าหู้">เต้าหู้ </a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเนื้อวัว" /></p>
-            <p align="center"><a href="เนื้อวัว.html">เนื้อวัว</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=เนื้อวัว">เนื้อวัว</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเป็ด" /></p>
-            <p align="center"><a href="เมนูเป็ด.html">เป็ด</a></p></th>  
+            <p align="center"><a href="view_index/view_content_material.php?type=เป็ด">เป็ด</a></p></th>  
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเส้น" /></p>
-            <p align="center"><a href="เมนูเส้น.html">เส้น</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=เส้น">เส้น</a></p></th>
           </tr>
           <tr>  
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูเห็ด" /></p>
-            <p align="center"><a href="เมนูเห็ด.html">เห็ด</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=เห็ด"> เห็ด</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูแซลมอน" /></p>
-            <p align="center"><a href="เมนูแซลมอน.html">แซลมอน</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=แซลมอน"> แซลมอน</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไก่" /></p>
-            <p align="center"><a href="เมนูไก่.html">ไก่</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ไก่"> ไก่</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่" /></p>
-            <p align="center"><a href="เมนูไข่.html">ไข่</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ไข่"> ไข่</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูไข่เค็ม" /></p>
-            <p align="center"><a href="เมนูไข่เค็ม.html">ไข่เค็ม</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ไข่เค็ม"> ไข่เค็ม</a></p></th>
           </tr>
           <tr> 
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูใส้กรอก" /></p>
-            <p align="center"><a href="เมนูใส้กรอก.html">ใส้กรอก</a></p></th>  
+            <p align="center"><a href="view_index/view_content_material.php?type=ใส้กรอก"> ใส้กรอก</a></p></th>  
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="เมนูผัก" /></p>
-            <p align="center"><a href="เมนูผัก.html">ผัก</a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=ผัก">ผัก</a></p></th>
             <th scope="row"><p><img src="img/1.png" width="150" height="70" alt="อื่นๆ" /></p>
-            <p align="center"><a href="อื่นๆวัตถุดิบ.html"> อื่นๆ </a></p></th>
+            <p align="center"><a href="view_index/view_content_material.php?type=อื่นๆ"> อื่นๆ </a></p></th>
           </tr>
-      </table>  
+      </table>   
 
         <h4><font color="#696969"><B><U>วันเทศกาล/วันสำคัญ</U></B></h4></FONT>
         <table align="center"  width="150" height="70" cellspacing= "0" cellspacing="0">  
