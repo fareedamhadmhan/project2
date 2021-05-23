@@ -1,33 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>UPLOAD FILE</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>UPLOAD FILE</title>
 </head>
 <body>
 <?php
-//1. เชื่อมต่อ database: 
-include('../connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
-//2. query ข้อมูลจากตาราง: 
-$query = "SELECT * FROM users_file" or die("Error:" . mysqli_error($con)); 
-//3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
-$result = mysqli_query($con, $query); 
-//4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
-echo "<table border='1' align='center' width='500'>";
-//หัวข้อตาราง
-echo "<tr align='center' bgcolor='#CCCCCC'><td>filename</td><td> img </td></tr>";
-while($row = mysqli_fetch_array($result)) { 
-  echo "<tr>";
-  echo "<td>" .$row["path_file"] .  "</td> ";
-  echo "<td>"."<img src='path_file".$row['path_file']."' width='50' height ='50'>"."</td>";
-  echo "</tr>";
-}
-echo "</table>";
-//5. close connection
-mysqli_close($con);
+  include "../connect.php";
+  @$id = $_GET["id"];
+
+  $query = "SELECT * FROM users WHERE id='$id' "; 
+
+  $result = mysqli_query($con, $query); 
+  echo "<table border='1' align='center' width='500'>";
+  echo "<tr align='center' bgcolor='#CCCCCC'><td>UserName</td><td> Email </td></tr>";
+  while($row = mysqli_fetch_array($result)) { 
+    echo "<tr>";
+    echo "<td>" .$row["username"] .  "</td> ";
+    echo "<td>".$row['email']."</td>";
+    echo "</tr>";
+  }
+  echo "</table>";
+  mysqli_close($con);
 ?>
 <br/>
-<form action="add_file_db.php" method="post" enctype="multipart/form-data" name="upfile" id="upfile">
+
+<form action="add_file_db.php" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="id" id="id" value="<?=$id;?>">
   <p>&nbsp;</p>
   <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
@@ -38,9 +37,9 @@ mysqli_close($con);
       <td width="574" bgcolor="#EDEDED">&nbsp;</td>
     </tr>
     <tr>
-      <td align="center" bgcolor="#EDEDED">File Browser</td>
+      <td align="center" bgcolor="#EDEDED">ใส่รูปของท่าน: </td>
       <td bgcolor="#EDEDED"><label>
-        <input type="file" name="path_file" id="path_file"  required="required"/>
+        <input type="file" name="upload_file" id="upload_file"  required="required"/>
       </label></td>
     </tr>
     <tr>
@@ -57,5 +56,12 @@ mysqli_close($con);
     </tr>
   </table>
 </form>
+<br>
+    <table  align="center">
+        <tr>
+          <td><button type="button" class="btn btn-outline-info"> <a href="../users_system/member.php" class="text-white"> ย้อนกลับ </a> </button> </td>
+          <td><button  type="button" class="btn btn-outline-info"> <a href="../index.php" class="text-white">หน้าหลัก</a> </button></td>
+        </tr>
+    </table> 
 </body>
 </html>

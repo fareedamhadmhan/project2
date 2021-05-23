@@ -334,7 +334,7 @@ if (!empty($name_menu)) {
             </tr>
             </table>
         </form>
-        <button class='btn btn-warning' onclick='delete_menu_submit()'>ลบสูตรอาหาร</button>
+        <button class='btn btn-danger' onclick='delete_menu_submit()'>ลบสูตรอาหาร</button>
         ";
     } else {
         echo "ไม่มีข้อมูล";

@@ -51,7 +51,16 @@ body
             <button type="submit" name="login_user" class="btn"><B>Login</B></button>
         </div>
         <p>Not yet a member? <a href="register.php">Sign Up</a></p>
-    </form>
+
+        <br>
+        <table align="center">
+        <tr>
+          <td><button  type="button" class="btn btn-primary"> <a href="../index.php" class="text-white">หน้าหลัก</a> </button></td>
+          
+        </tr>
+        </table> 
+        </form>
+
 
 </body>
 </html>

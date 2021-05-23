@@ -61,7 +61,7 @@ include '../connect.php';
      <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
-     <li class="active"><a href="member_system/member.php" class="text-white"><U>จัดการข้อมูลสมาชิก</U></a></li>
+     <li class="active"><a href="member.php" class="text-white"><U>จัดการข้อมูลสมาชิก</U></a></li>
      
   </ul><br>
   <form action="" method="get">
@@ -94,26 +94,35 @@ include '../connect.php';
             
             <?php
                   
-                    $sql = "SELECT * FROM users INNER JOIN users_file ON users.username = users_file.username";
+                    $sql = "SELECT * FROM users ";
                     if( isset($_GET['search']) ){
                     $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-                    $sql = "SELECT * FROM `users_file` WHERE id  ='$id'";
+                    // $sql = "SELECT * FROM `users_file` WHERE id  ='$id'";
                   }
-                    $result = $con->query($sql);
+                    // $result2 = $con->query($sql);
                 ?>
             
               <?php
-                    // $sql = "SELECT * FROM users INNER JOIN users_file ON users.username = users_file.username";
-                    // $result = $con->query($sql);
-                    while($row = $result->fetch_assoc()){
-                    $path = $row["path_file"];
+                    $sql = "SELECT * FROM users";
+                    $result = $con->query($sql);
+                   foreach($result as $row){
+                      $user_id = $row["id"];
+                     
+                      $sql_file = "SELECT * FROM users_file WHERE id='$user_id' ";
+                      $result1 = $con->query($sql_file);
+
+                      foreach($result1 as $row1){
+                        $path = $row1["path_file"];
+                      }
                       
-      
+                      
+                    
+                      
                 ?>
 
                 <tr>
                   
-                    <td align='center'><?php echo "<img src='users_system/<?=$path;?>' width= '50' height ='50'>"; ?></td> 
+                    <td align='center'><?php echo "<img src='../users_system/$path' width= '50' height ='50'>"; ?></td> 
                     <td align='center'><?php echo @$row['email']; ?></td>
                     <td align='center'><?php echo @$row['username']; ?></td>
                     <td align='center'><?php echo @$row['password']; ?></td>
@@ -125,6 +134,7 @@ include '../connect.php';
                   </tr>
                 </tr> 
             <?php
+                      
             }
             ?>
          </table> 
@@ -136,7 +146,7 @@ include '../connect.php';
     </div>
     </body>
 </html>
- 
+<!--  
 <br>
     <div id="show"></div>
 
@@ -159,5 +169,5 @@ include '../connect.php';
           processData: false
         });
       }
-    </script>
+    </script> -->
 
