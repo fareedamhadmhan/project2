@@ -5,7 +5,7 @@ $name_menu = $_POST["manu_name"];
 
 if (!empty($name_menu)) {
 
-    $sql        = "SELECT * FROM menu WHERE menu_name='$name_menu' ";
+    $sql        = "SELECT * FROM menu WHERE menu_name='$name_menu' and active='1' ";
     $result     =   @$con->query($sql);
     $row        = $result->fetch_assoc();
     $row_nums   = $result->num_rows;

@@ -22,7 +22,6 @@ body
   background-size: 100% 100%;
 }
 </style>
-    
     <div class="header">
         <h2>Register</h2>
     </div>
@@ -40,12 +39,7 @@ body
                 </h3>
             </div>
         <?php endif ?>
-    
 
-      <!-- <label> &nbsp; Choose your profile:</label>
-          <input type="file" name="file">
-          <input type="submit" value="upload" name="submit">
-      -->
 
         <div class="input-group">
             <label for="username">Username</label>
@@ -69,6 +63,14 @@ body
         </div>
         <p>Already a member? <a href="login.php">Sign in</a></p>
     
+        <br>
+        <table align="center">
+        <tr>
+        
+          <td><button  type="button" class="btn btn-primary"> <a href="../register_system/login.php" class="text-white">ย้อนกลับ</a> </button></td>
+
+        </tr>
+        </table> 
         </form>    
 
 

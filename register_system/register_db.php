@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include('server.php');
+    include '../connect.php';
     
     $errors = array();
 
@@ -43,22 +44,18 @@
 
         if (count($errors) == 0) {
             $password = $password_1;
+            $add_date = date('Y-m-d');
 
-            //  $file_tmp = $_FILES['file']['tmp_name'];
-            //  $file_name = $_FILES['file']['name'];
-            //  $file_destination = 'C:/xampp\htdocs\project2\register_system' . $file_name;
-            //  move_uploaded_file($file_tmp, $file_destination);
+            $sql_user = "INSERT INTO users (username, email,password,status) VALUES ('$username', '$email', '$password','U')";
+            $sql_file = "INSERT INTO users_file (username, add_date) VALUES ('$username', '$add_date')";
 
-            $sql = "INSERT INTO users (username, email,password,status) VALUES ('$username', '$email', '$password','U')";
-            mysqli_query($conn, $sql);
+            @$con->query($sql_user);
+            @$con->query($sql_file);
 
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
             
              header("location: login.php");
-        // } else {
-        //      header("location: login.php");
-          
         }
     }
 
