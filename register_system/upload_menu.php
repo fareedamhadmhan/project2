@@ -5,7 +5,6 @@ include '../connect.php';
 <?php
 $menu_name      = $_POST["menu_name"];
 $explain        = $_POST["explain"];
-$number_p       = $_POST["number_p"];
 $time           = $_POST["time"];
 $Ingredients    = $_POST["Ingredients"];
 $cook           = $_POST["cook"];
@@ -14,6 +13,7 @@ $food_type      = "";
 $fastival       = "";
 $international  = "";
 $local_food     = "";
+$material     = "";
 $uploadfile     = "";
 $date           = date("Y-m-d");
 
@@ -28,6 +28,9 @@ if (!empty($_POST["international"])) {
 }
 if (!empty($_POST["local_food"])) {
   $local_food      = $_POST["local_food"];
+}
+if (!empty($_POST["material"])) {
+  $material       = $_POST["material"];
 }
 
 $fileupload     = $_FILES["fileupload"]["tmp_name"];
@@ -44,7 +47,7 @@ if (!empty($menu_name)) {
   $menu_name = "";
 }
 
-@$sql_menu = "INSERT INTO `menu` (`menu_name`, `Ingredients`, `cook`,`detail`,`for_people`,`food_type`,`international`,`fastival`,`local_food`) VALUES ('$menu_name','$Ingredients','$cook','$explain','$number_p','$food_type','$international','$fastival','$local_food')";
+@$sql_menu = "INSERT INTO `menu` (`menu_name`, `Ingredients`, `cook`,`detail`,`material`,`food_type`,`international`,`fastival`,`local_food`) VALUES ('$menu_name','$Ingredients','$cook','$explain','$material','$food_type','$international','$fastival','$local_food')";
 @$sql_file = "INSERT INTO `attach_file` (`menu_name`,`path_file`,`add_date`) VALUES ('$menu_name','$uploadfile','$date')";
 
 @$con->query($sql_menu);

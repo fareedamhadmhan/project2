@@ -49,14 +49,14 @@
     <h1 align="center">Cooking World</h1>
     <h1 align="center">ทุกมื้อให้เราดูแลคุณ</h1>  
       
-     <ul class="nav nav-pills nav-stacked">
+    <ul class="nav nav-pills nav-stacked">
      <li class="active"><a href="../index.php" class="text-white"><U>หน้าหลัก</U></a></li>
-     <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
-     <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
-     <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
-     <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
-     <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
+     <li><a href="../register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
+     <li><a href="../ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
+     <li><a href="../วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
+     <!-- <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
+     <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
+     <li><a href="../users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
  
       </ul><br>
       <form action="" method="get">
@@ -100,7 +100,10 @@ foreach(@$result as $row){
       
       $sql_menu_pic = "SELECT * FROM menu INNER JOIN attach_file ON menu.menu_name = attach_file.menu_name WHERE menu.active='1' and fastival='$id_type' ";
       @$result_pic = $con->query($sql_menu_pic);
+      $count_row    = $result_pic->num_rows;
       $intRows = 0;
+
+      if($count_row>0){
 
       while(@$objResult = mysqli_fetch_array($result_pic))
         {
@@ -130,7 +133,9 @@ foreach(@$result as $row){
        echo "</tr>\n";
       }
       echo "</table>\n";
-
+    }else{
+        echo "ไม่มีข้อมูล";
+      }
     ?>
         </form>
        </div>

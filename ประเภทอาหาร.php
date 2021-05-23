@@ -59,7 +59,7 @@
      <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li class="active" ><a href="ประเภทอาหาร.php" class="text-white"><U>จัดการประเภทอาหาร</U></a></li>
      <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <!-- <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
@@ -118,7 +118,7 @@ while($row = mysqli_fetch_array($result)) {
   $mn = $row["food_type"];
   echo "<tr>";
   echo "<td>" .$mn ."</td> "; 
-  echo "<td>&nbsp;&nbsp;&nbsp;<a href='$mn.html'>Select</a></td>";
+  echo "<td>&nbsp;&nbsp;&nbsp;<a href='view_index/view_content.php?type=$mn'>Select</a></td>";
   echo "</tr>";
 
 }

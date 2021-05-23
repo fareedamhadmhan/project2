@@ -55,7 +55,7 @@
      <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
      <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
      <li  class="active"><a href="วัตถุดิบ.php" class="text-white"><U>จัดการวัตถุดิบ</U></a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+     <!-- <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
      <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
      <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
      <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>       
@@ -111,7 +111,7 @@
 include('connect.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
  
 //2. query ข้อมูลจากตาราง tb_member: 
-$query = "SELECT * FROM  material ORDER BY material_name asc" or die("Error:" . mysqli_error($con)); 
+$query = "SELECT * FROM  material ORDER BY material asc" or die("Error:" . mysqli_error($con)); 
 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
 //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
@@ -119,10 +119,10 @@ echo "<table style='border: 0px ' table border=1 align='center' width='300' cell
 // //หัวข้อตาราง
 // echo "<tr align='center' bgcolor='#CCCCCC'><td>วัตถุดิบ</td><td>Uername</td><td>ชื่อ</td><td>นามสกุล</td><td>อีเมล์</td><td>แก้ไข</td><td>ลบ</td></tr>";
 while($row = mysqli_fetch_array($result)) { 
-  $mn = $row["material_name"];
+  $mn = $row["material"];
   echo "<tr>";
   echo "<td>" .$mn ."</td> "; 
-  echo "<td>&nbsp;&nbsp;&nbsp;<a href='$mn.html'>Select</a></td>";
+  echo "<td>&nbsp;&nbsp;&nbsp;<a href='view_index/view_content_material.php?type=$mn'>Select</a></td>";
   // echo "<td>" .$row["material_name"] .  "</td> "; 
 }
 echo "</table>";

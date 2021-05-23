@@ -74,7 +74,7 @@ include '../connect.php';
           <li class="active"><a href="Recipe.php" class="text-white"><U>จัดการสูตรอาหาร</U></a></li>
           <li><a href="../ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
           <li><a href="../วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-          <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
+          <!-- <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
           <!-- <li><a href="วัตถุดิบทดแทน.php" class="text-white">จัดการวัตถุดิบทดแทน</a></li> -->
           <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
           <li><a href="../member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
@@ -144,15 +144,6 @@ include '../connect.php';
           </tr>
           <tr>
             <td align="center"><textarea id="explain" name="explain" rows="2" cols="100" placeholder="เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
-          </tr>
-          <tr>
-            <td><br></td>
-          </tr>
-          <tr>
-            <td align="center"><label>สำหรับ</label></td>
-          </tr>
-          <tr>
-            <td align="center"><textarea id="number_p" name="number_p" rows="1" cols="100" placeholder="กี่คน" style="resize:none" input type="varchar(20)" class="form-control "></textarea></td>
           </tr>
           <tr>
             <td><br></td>
@@ -230,6 +221,46 @@ include '../connect.php';
                   <TD><INPUT TYPE=radio Name=food_type VALUE="23"> โปรตีน &nbsp;</TD>
                   <TD><INPUT TYPE=radio Name=food_type VALUE="24"> เมนูฟิวชั่น &nbsp;</TD>
                   <TD><INPUT TYPE=radio Name=food_type VALUE="25"> อื่นๆ &nbsp;</TD>
+                </tr>
+                <tr>
+                  <td><br></td>
+                </tr>
+                <tr>
+                  <td width="20%"><label>วัตถุดิบหลักที่ใช้</label></td>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE="1">ขนมปัง &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="2">กุ้ง  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="3">ชีส  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="4">ปลา  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="5">ปลาหมึก  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE="6">ปู &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="7">ผลไม้ &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="8">สามชั้น &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="9">หมู &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="10">หอย  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE="11">อกไก่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="12">เต้าหู้ &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="13">เนื้อวัว  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="14">เป็ด  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="15">เส้น  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE="16">เห็ด &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="17">แซลมอน  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="18">ไก่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="19">ไข่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="20">ไข่เค็ม  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE="21">ใส้กรอก &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="22">ผัก &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE="23">อื่นๆ  &nbsp;</TD>
+            
                 </tr>
                 <tr>
                   <td><br></td>

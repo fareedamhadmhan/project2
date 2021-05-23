@@ -10,14 +10,14 @@ $id= $_REQUEST["id"];
 //ลบข้อมูลออกจาก database ตาม admin_Email ที่ส่งมา
  
 $sql = "DELETE FROM users WHERE id ='$id' ";
-$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
+$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
  
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
 	
 	if($result){
 	echo "<script type='text/javascript'>";
 	echo "alert('delete Succesfuly');";
-	echo "window.location = 'member.php'; ";
+	echo "window.location = 'users_system/member.php'; ";
 	echo "</script>";
 	}
 	else{

@@ -50,14 +50,14 @@
     <h1 align="center">ทุกมื้อให้เราดูแลคุณ</h1>  
       
      <ul class="nav nav-pills nav-stacked">
-     <li class="active"><a href="../index.php" class="text-white"><U>หน้าหลัก</U></a></li>
-     <li><a href="register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
-     <li><a href="ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
-     <li><a href="วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
-     <li><a href="วิธีการ.php" class="text-white">จัดการวิธีการ</a></li>
-     <li><a href="ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
-     <li><a href="users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
- 
+     <li><a href="../index.php" class="text-white">หน้าหลัก</a></li>
+     <li><a href="../register_system/login.php" class="text-white">จัดการสูตรอาหาร</a></li>
+     <li><a href="../ประเภทอาหาร.php" class="text-white">จัดการประเภทอาหาร</a></li>
+     <li><a href="../วัตถุดิบ.php" class="text-white">จัดการวัตถุดิบ</a></li>
+     <!-- <li><a href="../วิธีการ.php" class="text-white">จัดการวิธีการ</a></li> -->
+     <li><a href="../ผู้ดูแลระบบ.php" class="text-white">จัดการข้อมูลผู้ดูแลระบบ</a></li>
+     <li><a href="../users_system/member.php" class="text-white">จัดการข้อมูลสมาชิก</a></li>
+
       </ul><br>
       <form action="" method="get">
       <label>ค้นหาเมนูอาหาร</label>
@@ -93,8 +93,14 @@ foreach($result_pic as $row_pic){
     $name = $row_pic["menu_name"];    
     $detail = $row_pic["detail"];     
     $Ingredients = $row_pic["Ingredients"];   
-    $cook = $row_pic["cook"];   
-    $for_people = $row_pic["for_people"];   
+    $cook = $row_pic["cook"];
+    $material = $row_pic["material"];
+    
+    $sql_material = "SELECT * FROM material WHERE ID='$material' ";
+    @$result_mate = $con->query($sql_material);
+    foreach($result_mate as $row_mate){
+      $material = $row_mate["material"];
+    }
 }
 ?>
 <center>
@@ -122,8 +128,8 @@ foreach($result_pic as $row_pic){
    </tr>
    <tr><td><br></td></tr>
    <tr>
-   <td width='150'><h4><B>สำหรับ: <B><h4> </td>
-    <td width='750'><h4><?=$for_people;?></h4></td>
+   <td width='150'><h4><B>วัตถุดิบหลักที่ใช้: <B><h4> </td>
+    <td width='750'><h4><?=$material;?></h4></td>
    </tr>
    <tr><td><br></td></tr>
    <tr>

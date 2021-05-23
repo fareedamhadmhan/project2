@@ -9,10 +9,8 @@ if (!empty($name_menu)) {
     $result     =   @$con->query($sql);
     $row        = $result->fetch_assoc();
     $row_nums   = $result->num_rows;
-    $menu_id    = @$row["menu_id"];
 
     $detail             = @$row["detail"];
-    $people             = @$row["for_people"];
     $ingredients        = @$row["Ingredients"];
     $cook               = @$row["cook"];
 
@@ -20,6 +18,7 @@ if (!empty($name_menu)) {
     $fastival           = @$row["fastival"];
     $international      = @$row["international"];
     $local_food         = @$row["local_food"];
+    $material           = @$row["material"];
 
     $confoodtype_1 = "";
     $confoodtype_2 = "";
@@ -181,26 +180,88 @@ if (!empty($name_menu)) {
         $conlocal_4="checked";
     }
 
+    $conmaterial_1  = "";
+    $conmaterial_2  = "";
+    $conmaterial_3  = "";
+    $conmaterial_4  = "";
+    $conmaterial_5  = "";
+    $conmaterial_6  = "";
+    $conmaterial_7  = "";
+    $conmaterial_8  = "";
+    $conmaterial_9  = "";
+    $conmaterial_10 = "";
+    $conmaterial_11 = "";
+    $conmaterial_12 = "";
+    $conmaterial_13 = "";
+    $conmaterial_14 = "";
+    $conmaterial_15 = "";
+    $conmaterial_16 = "";
+    $conmaterial_17 = "";
+    $conmaterial_18 = "";
+    $conmaterial_19 = "";
+    $conmaterial_20 = "";
+    $conmaterial_21 = "";
+    $conmaterial_22 = "";
+    $conmaterial_23= "";
+
+    if($material=="1"){
+        $conmaterial_1 = "checked";
+    }else if($material=="2"){
+        $conmaterial_2="checked";
+    }else if($material=="3"){
+        $conmaterial_3="checked";
+    }else if($material=="4"){
+        $conmaterial_4="checked";
+    }else if($material=="5"){
+        $conmaterial_5="checked";
+    }else if($material=="6"){
+        $conmaterial_6="checked";
+    }else if($material=="7"){
+        $conmaterial_7="checked";
+    }else if($material=="8"){
+        $conmaterial_8="checked";
+    }else if($material=="9"){
+        $conmaterial_9="checked";
+    }else if($material=="10"){
+        $conmaterial_10="checked";
+    }else if($material=="11"){
+        $conmaterial_11="checked";
+    }else if($material=="12"){
+        $conmaterial_12="checked";
+    }else if($material=="13"){
+        $conmaterial_13="checked";
+    }else if($material=="14"){
+        $conmaterial_14="checked";
+    }else if($material=="15"){
+        $conmaterial_15="checked";
+    }else if($material=="16"){
+        $conmaterial_16="checked";
+    }else if($material=="17"){
+        $conmaterial_17="checked";
+    }else if($material=="18"){
+        $conmaterial_18="checked";
+    }else if($material=="19"){
+        $conmaterial_19="checked";
+    }else if($material=="20"){
+        $conmaterial_20="checked";
+    }else if($material=="21"){
+        $conmaterial_21="checked";
+    }else if($material=="22"){
+        $conmaterial_22="checked";
+    }else if($material=="23"){
+        $conmaterial_23="checked";
+    }
+
 
     if ($row_nums >= 1) {
         echo "<form id='data1' action='' method='post'>
         <input type='hidden' name='menu_name' value='" . $name_menu . "'>
-        <input type='hidden' name='menu_id' value='" . $menu_id . "'>
         <table>      
             <tr>
                 <td align='center'><label> อธิบายสั้น ๆ เกี่ยวกับเมนูนี้</label></td>
             </tr>
             <tr>
                 <td align='center'><textarea id='explain' name='explain' rows='2' cols='100' placeholder='เล่าเคล็ดลับ/ที่มา #เล่าเรื่องราวความพิเศษของสูตรอาหารของคุณ' style='resize:none'  input type='text' class='form-control'>" . $detail . "</textarea></td>
-            </tr>
-            <tr>
-                <td><br></td>
-            </tr>
-            <tr>
-                <td align='center'><label>สำหรับ</label></td>
-            </tr>
-            <tr>
-                <td align='center'><textarea id='number_p' name='number_p' rows='1' cols='100' placeholder='กี่คน' style='resize:none'  input type='text'  class='form-control'>" . $people . "</textarea></td>
             </tr>
             <tr>
                 <td><br></td>
@@ -270,6 +331,46 @@ if (!empty($name_menu)) {
                              <TD><INPUT TYPE=radio Name=food_type VALUE='24' $confoodtype_24> เมนูฟิวชั่น &nbsp;</TD>
                              <TD><INPUT TYPE=radio Name=food_type VALUE='25' $confoodtype_25> อื่นๆ &nbsp;</TD>
                         </tr>
+                        <tr>
+                  <td><br></td>
+                </tr>
+                <tr>
+                  <td width='20%'><label>วัตถุดิบหลักที่ใช้</label></td>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE='1' $conmaterial_1>ขนมปัง &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='2' $conmaterial_2>กุ้ง  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='3' $conmaterial_3>ชีส  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='4' $conmaterial_4>ปลา  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='5' $conmaterial_5>ปลาหมึก  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE='6'  $conmaterial_6>ปู &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='7'  $conmaterial_7>ผลไม้ &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='8'  $conmaterial_8>สามชั้น &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='9'  $conmaterial_9>หมู &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='10' $conmaterial_10>หอย  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE='11' $conmaterial_11>อกไก่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='12' $conmaterial_12>เต้าหู้ &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='13' $conmaterial_13>เนื้อวัว  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='14' $conmaterial_14>เป็ด  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='15' $conmaterial_15>เส้น  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE='16' $conmaterial_16>เห็ด &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='17' $conmaterial_17>แซลมอน  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='18' $conmaterial_18>ไก่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='19' $conmaterial_19>ไข่  &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='20' $conmaterial_20>ไข่เค็ม  &nbsp;</TD>
+                </tr>
+                <tr>
+                  <TD><INPUT TYPE=radio Name=material VALUE='21' $conmaterial_21>ใส้กรอก &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='22' $conmaterial_22>ผัก &nbsp;</TD>
+                  <TD><INPUT TYPE=radio Name=material VALUE='23' $conmaterial_23>อื่นๆ  &nbsp;</TD>
+            
+                </tr>
                         <tr>
                             <td><br></td>
                         </tr>
